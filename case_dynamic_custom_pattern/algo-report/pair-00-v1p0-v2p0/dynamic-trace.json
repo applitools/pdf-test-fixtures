@@ -1,0 +1,35 @@
+[
+  {
+    "DiffRect": "120, 243, 194, 16",
+    "Cause": "DisplacedDown",
+    "Stage": "displacement_approval",
+    "Text1": "Last reviewed: January 15, 2026",
+    "Text2": "Last reviewed: March 22, 2026",
+    "DisplacementOffset": 72,
+    "Pattern": "Date+Day",
+    "Suppressed": true,
+    "Reason": "pattern_match"
+  },
+  {
+    "DiffRect": "216, 243, 48, 15",
+    "Cause": "Changed",
+    "Stage": "displacement_approval",
+    "Text1": "Last reviewed: January 15, 2026",
+    "Text2": "Last reviewed: March 22, 2026",
+    "DisplacementOffset": 72,
+    "Pattern": "Date+Day",
+    "Suppressed": true,
+    "Reason": "pattern_match"
+  },
+  {
+    "DiffRect": "268, 243, 18, 15",
+    "Cause": "Changed",
+    "Stage": "displacement_approval",
+    "Text1": "Last reviewed: January 15, 2026",
+    "Text2": "Last reviewed: March 22, 2026",
+    "DisplacementOffset": 72,
+    "Pattern": "Date+Day",
+    "Suppressed": true,
+    "Reason": "pattern_match"
+  }
+]

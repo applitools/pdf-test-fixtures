@@ -1,0 +1,210 @@
+[
+  {
+    "index": 0,
+    "cause": "DisplacedDown",
+    "baseline": {
+      "x": 120,
+      "y": 243,
+      "w": 203,
+      "h": 15
+    },
+    "checkpoint": {
+      "x": 120,
+      "y": 316,
+      "w": 203,
+      "h": 15
+    },
+    "source": null,
+    "isPartial": false
+  },
+  {
+    "index": 1,
+    "cause": "Inserted",
+    "baseline": null,
+    "checkpoint": {
+      "x": 120,
+      "y": 243,
+      "w": 545,
+      "h": 55
+    },
+    "source": {
+      "x": 120,
+      "y": 243,
+      "w": 203,
+      "h": 15
+    },
+    "isPartial": true
+  },
+  {
+    "index": 2,
+    "cause": "Dynamic",
+    "baseline": {
+      "x": 216,
+      "y": 243,
+      "w": 48,
+      "h": 15
+    },
+    "checkpoint": {
+      "x": 216,
+      "y": 243,
+      "w": 48,
+      "h": 15
+    },
+    "source": {
+      "x": 120,
+      "y": 243,
+      "w": 203,
+      "h": 15
+    },
+    "isPartial": true
+  },
+  {
+    "index": 3,
+    "cause": "Dynamic",
+    "baseline": {
+      "x": 268,
+      "y": 243,
+      "w": 18,
+      "h": 15
+    },
+    "checkpoint": {
+      "x": 268,
+      "y": 243,
+      "w": 18,
+      "h": 15
+    },
+    "source": {
+      "x": 120,
+      "y": 243,
+      "w": 203,
+      "h": 15
+    },
+    "isPartial": true
+  },
+  {
+    "index": 4,
+    "cause": "DisplacedDown",
+    "baseline": {
+      "x": 120,
+      "y": 309,
+      "w": 371,
+      "h": 16
+    },
+    "checkpoint": {
+      "x": 120,
+      "y": 381,
+      "w": 371,
+      "h": 16
+    },
+    "source": null,
+    "isPartial": false
+  },
+  {
+    "index": 5,
+    "cause": "DisplacedDown",
+    "baseline": {
+      "x": 120,
+      "y": 243,
+      "w": 194,
+      "h": 16
+    },
+    "checkpoint": {
+      "x": 120,
+      "y": 315,
+      "w": 194,
+      "h": 16
+    },
+    "source": null,
+    "isPartial": false
+  },
+  {
+    "index": 6,
+    "cause": "DisplacedDown",
+    "baseline": {
+      "x": 120,
+      "y": 342,
+      "w": 370,
+      "h": 16
+    },
+    "checkpoint": {
+      "x": 120,
+      "y": 414,
+      "w": 370,
+      "h": 16
+    },
+    "source": null,
+    "isPartial": false
+  },
+  {
+    "index": 7,
+    "cause": "DisplacedDown",
+    "baseline": {
+      "x": 120,
+      "y": 375,
+      "w": 391,
+      "h": 16
+    },
+    "checkpoint": {
+      "x": 120,
+      "y": 447,
+      "w": 391,
+      "h": 16
+    },
+    "source": null,
+    "isPartial": false
+  },
+  {
+    "index": 8,
+    "cause": "DisplacedDown",
+    "baseline": {
+      "x": 120,
+      "y": 310,
+      "w": 371,
+      "h": 15
+    },
+    "checkpoint": {
+      "x": 120,
+      "y": 382,
+      "w": 371,
+      "h": 15
+    },
+    "source": null,
+    "isPartial": false
+  },
+  {
+    "index": 9,
+    "cause": "DisplacedDown",
+    "baseline": {
+      "x": 120,
+      "y": 343,
+      "w": 370,
+      "h": 15
+    },
+    "checkpoint": {
+      "x": 120,
+      "y": 415,
+      "w": 370,
+      "h": 15
+    },
+    "source": null,
+    "isPartial": false
+  },
+  {
+    "index": 10,
+    "cause": "DisplacedDown",
+    "baseline": {
+      "x": 120,
+      "y": 376,
+      "w": 391,
+      "h": 16
+    },
+    "checkpoint": {
+      "x": 120,
+      "y": 448,
+      "w": 391,
+      "h": 16
+    },
+    "source": null,
+    "isPartial": false
+  }
+]

@@ -1,0 +1,79 @@
+[
+  {
+    "DiffRect": "96, 583, 613, 16",
+    "Cause": "Modified",
+    "Stage": "displacement_approval",
+    "Text1": "The strong room log records every box that leaves the room and every box that returns, with the\ntime and the volunteer's initials. A box that is out for cataloguing may be out for weeks; that is fine,\nprovided the log says so. What the log prevents is the situation where a box is missing and nobody\ncan say whether it was ever on the shelf, was taken to the reading room, or went home in\nsomebody's bag by mistake, which has happened, exactly once, and was not found for a fortnight. provided the log says so. What the log prevents is the situation where a box is missing and nobody",
+    "Text2": "",
+    "DisplacementOffset": 376,
+    "Pattern": null,
+    "Suppressed": false,
+    "Reason": "no_match"
+  },
+  {
+    "DiffRect": "96, 583, 613, 16",
+    "Cause": "Modified",
+    "Stage": "page_level",
+    "Text1": "The strong room log records every box that leaves the room and every box that returns, with the\ntime and the volunteer's initials. A box that is out for cataloguing may be out for weeks; that is fine,\nprovided the log says so. What the log prevents is the situation where a box is missing and nobody\ncan say whether it was ever on the shelf, was taken to the reading room, or went home in\nsomebody's bag by mistake, which has happened, exactly once, and was not found for a fortnight. provided the log says so. What the log prevents is the situation where a box is missing and nobody",
+    "Text2": "Photographs are sleeved individually and stored on edge, not flat, in their own boxes. Negatives are\nkept apart from prints. Anything on glass is boxed in padded trays and marked as such on the\noutside, and glass is never carried more than one tray at a time. Newspaper cuttings are\nphotocopied onto archival paper and the copy is filed; the original is kept, but in a separate box,\nbecause it will brown and embrittle whatever it touches, and given time it touches everything. outside, and glass is never carried more than one tray at a time. Newspaper cuttings are",
+    "DisplacementOffset": 0,
+    "Pattern": null,
+    "Suppressed": false,
+    "Reason": "no_match"
+  },
+  {
+    "DiffRect": "96, 603, 556, 16",
+    "Cause": "Modified",
+    "Stage": "displacement_approval",
+    "Text1": "The strong room log records every box that leaves the room and every box that returns, with the\ntime and the volunteer's initials. A box that is out for cataloguing may be out for weeks; that is fine,\nprovided the log says so. What the log prevents is the situation where a box is missing and nobody\ncan say whether it was ever on the shelf, was taken to the reading room, or went home in\nsomebody's bag by mistake, which has happened, exactly once, and was not found for a fortnight. can say whether it was ever on the shelf, was taken to the reading room, or went home in",
+    "Text2": "Page 6 of 3",
+    "DisplacementOffset": 376,
+    "Pattern": null,
+    "Suppressed": false,
+    "Reason": "no_match"
+  },
+  {
+    "DiffRect": "96, 603, 556, 16",
+    "Cause": "Modified",
+    "Stage": "page_level",
+    "Text1": "The strong room log records every box that leaves the room and every box that returns, with the\ntime and the volunteer's initials. A box that is out for cataloguing may be out for weeks; that is fine,\nprovided the log says so. What the log prevents is the situation where a box is missing and nobody\ncan say whether it was ever on the shelf, was taken to the reading room, or went home in\nsomebody's bag by mistake, which has happened, exactly once, and was not found for a fortnight. can say whether it was ever on the shelf, was taken to the reading room, or went home in",
+    "Text2": "Photographs are sleeved individually and stored on edge, not flat, in their own boxes. Negatives are\nkept apart from prints. Anything on glass is boxed in padded trays and marked as such on the\noutside, and glass is never carried more than one tray at a time. Newspaper cuttings are\nphotocopied onto archival paper and the copy is filed; the original is kept, but in a separate box,\nbecause it will brown and embrittle whatever it touches, and given time it touches everything. photocopied onto archival paper and the copy is filed; the original is kept, but in a separate box,",
+    "DisplacementOffset": 0,
+    "Pattern": null,
+    "Suppressed": false,
+    "Reason": "no_match"
+  },
+  {
+    "DiffRect": "96, 623, 606, 16",
+    "Cause": "Modified",
+    "Stage": "displacement_approval",
+    "Text1": "The strong room log records every box that leaves the room and every box that returns, with the\ntime and the volunteer's initials. A box that is out for cataloguing may be out for weeks; that is fine,\nprovided the log says so. What the log prevents is the situation where a box is missing and nobody\ncan say whether it was ever on the shelf, was taken to the reading room, or went home in\nsomebody's bag by mistake, which has happened, exactly once, and was not found for a fortnight. somebody's bag by mistake, which has happened, exactly once, and was not found for a fortnight.",
+    "Text2": "Page 6 of 3",
+    "DisplacementOffset": 376,
+    "Pattern": null,
+    "Suppressed": false,
+    "Reason": "no_match"
+  },
+  {
+    "DiffRect": "96, 623, 606, 16",
+    "Cause": "Modified",
+    "Stage": "page_level",
+    "Text1": "The strong room log records every box that leaves the room and every box that returns, with the\ntime and the volunteer's initials. A box that is out for cataloguing may be out for weeks; that is fine,\nprovided the log says so. What the log prevents is the situation where a box is missing and nobody\ncan say whether it was ever on the shelf, was taken to the reading room, or went home in\nsomebody's bag by mistake, which has happened, exactly once, and was not found for a fortnight. somebody's bag by mistake, which has happened, exactly once, and was not found for a fortnight.",
+    "Text2": "Photographs are sleeved individually and stored on edge, not flat, in their own boxes. Negatives are\nkept apart from prints. Anything on glass is boxed in padded trays and marked as such on the\noutside, and glass is never carried more than one tray at a time. Newspaper cuttings are\nphotocopied onto archival paper and the copy is filed; the original is kept, but in a separate box,\nbecause it will brown and embrittle whatever it touches, and given time it touches everything. because it will brown and embrittle whatever it touches, and given time it touches everything.",
+    "DisplacementOffset": 0,
+    "Pattern": null,
+    "Suppressed": false,
+    "Reason": "no_match"
+  },
+  {
+    "DiffRect": "429, 990, 9, 15",
+    "Cause": "Changed",
+    "Stage": "displacement_approval",
+    "Text1": "5",
+    "Text2": "",
+    "DisplacementOffset": 376,
+    "Pattern": null,
+    "Suppressed": false,
+    "Reason": "no_match"
+  }
+]

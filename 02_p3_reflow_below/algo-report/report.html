@@ -1,0 +1,347 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PDF sample report — 02_p3_reflow_below</title>
+<style>
+:root{--fg:#1a1f24;--muted:#6b7680;--line:#e2e6ea;--bg:#fff;--accent:#0b5cad;--code:#f4f6f8}
+*{box-sizing:border-box}body{margin:0;font:14px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--fg);background:#f7f9fb}
+header{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);padding:14px 24px;z-index:10}
+header h1{margin:0 0 6px;font-size:19px}
+nav{display:flex;flex-wrap:wrap;gap:14px;font-size:13px}
+nav a{color:var(--accent);text-decoration:none}nav a:hover{text-decoration:underline}
+main{max-width:1180px;margin:0 auto;padding:8px 24px 60px}
+section{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:18px 22px;margin:18px 0}
+h2{font-size:16px;margin:0 0 14px;padding-bottom:8px;border-bottom:2px solid var(--line)}
+h4{margin:14px 0 6px;font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+.muted{color:var(--muted)}.mono{font-family:ui-monospace,Consolas,monospace;font-size:12px}
+.path{word-break:break-all}
+table{border-collapse:collapse;width:100%}
+table.kv th{text-align:right;color:var(--muted);font-weight:600;padding:4px 10px;white-space:nowrap;width:1%}
+table.kv td{padding:4px 10px}
+table.rec{font-size:12.5px;margin:6px 0;display:block;overflow-x:auto}
+table.rec th{background:var(--code);text-align:left;padding:6px 9px;border-bottom:1px solid var(--line);position:sticky;top:0}
+table.rec td{padding:5px 9px;border-bottom:1px solid var(--line);vertical-align:top}
+td.ret{font-weight:700;text-align:center}.retv{color:#2e7d32}.retx{color:#c62828}.prunedrow{opacity:.55}.pruned{color:#c62828;font-weight:600}
+.tagchip,.framechip{display:inline-block;color:#fff;padding:1px 8px;border-radius:10px;font-size:11.5px;font-weight:600;white-space:nowrap}
+.chips{display:inline-flex;gap:5px;flex-wrap:wrap}
+.barrow{display:flex;align-items:center;gap:8px;margin:3px 0}
+.barlabel{flex:0 0 150px;font-size:12.5px}.bartrack{flex:1;background:var(--code);border-radius:4px;height:16px;overflow:hidden}
+.barfill{display:block;height:100%}.barval{flex:0 0 34px;text-align:right;font-variant-numeric:tabular-nums}
+.cols3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+@media(max-width:820px){.cols3{grid-template-columns:1fr}}
+details.pair{border:1px solid var(--line);border-radius:6px;margin:10px 0;padding:6px 12px}
+details.pair>summary{cursor:pointer;font-weight:600;padding:4px 0}
+.imgrow{display:flex;gap:14px;flex-wrap:wrap;margin:10px 0}
+.imgcell{flex:0 0 auto;width:220px}
+.cap{font-size:11px;color:var(--muted);margin-top:3px;font-family:ui-monospace,monospace}
+img.plot{width:100%;height:auto;border:1px solid var(--line);border-radius:4px;background:#fafafa}
+.pairgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:12px 0}
+@media(max-width:820px){.pairgrid{grid-template-columns:1fr}}
+.paircell{border:1px solid var(--line);border-radius:6px;padding:6px;background:#fafafa}
+.paircell.inserted{border-color:#78909c;background:#f5f7f8}.paircell.deleted{border-color:#c62828;background:#fbf3f3}
+.pairimgs{display:flex;gap:4px;align-items:flex-start}
+.pageimg{width:50%;height:auto;border:1px solid var(--line);border-radius:3px;background:#fff}
+.pageslot{width:50%;min-height:60px;display:flex;align-items:center;justify-content:center;color:var(--muted);border:1px dashed var(--line);border-radius:3px}
+.paircap{font-size:11px;color:var(--muted);margin-top:4px;font-family:ui-monospace,monospace;line-height:1.35}
+details.legend{margin:8px 0}details.legend>summary{cursor:pointer;font-size:12px;color:var(--accent)}
+img.legendimg{max-width:520px;width:100%;height:auto;border:1px solid var(--line);border-radius:4px;margin-top:6px;background:#fff}
+.missing{color:#c62828;font-size:12px;padding:8px;border:1px dashed #c62828;border-radius:4px}
+pre.summary{background:var(--code);border-radius:6px;padding:10px 14px;overflow-x:auto;font-size:12px;white-space:pre}
+.timeline{font-family:ui-monospace,monospace;font-size:12px;columns:2;margin:8px 0}
+@media(max-width:820px){.timeline{columns:1}}
+.clip{max-width:520px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.mdbox{background:var(--code);border-radius:6px;padding:2px 16px}
+.mdbox code,td code{background:#e7ebef;padding:1px 4px;border-radius:3px;font-size:12px}
+ul.artifacts{list-style:none;padding:0;font-size:13px}ul.artifacts li{padding:2px 0}
+ul.artifacts a{color:var(--accent)}
+footer{max-width:1180px;margin:0 auto;padding:0 24px 40px;font-size:12px}
+kbd{background:#e7ebef;border-radius:3px;padding:0 4px;font-family:ui-monospace,monospace;font-size:11px}
+img.zoomable{cursor:zoom-in}
+#lightbox{display:none;position:fixed;inset:0;z-index:1000;background:rgba(15,18,22,.94);flex-direction:column}
+#lightbox.open{display:flex}
+#lb-bar{display:flex;align-items:center;gap:10px;padding:8px 14px;background:#11151a;color:#cdd6df;font-size:13px;border-bottom:1px solid #2a3138}
+#lb-cap{font-family:ui-monospace,monospace;font-size:12px;color:#9aa7b2;max-width:46vw;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.lb-coord{font-family:ui-monospace,monospace;font-size:12px;color:#6b7680;min-width:150px}
+.lb-coord.v1{color:#4aa3ff}.lb-coord.v2{color:#4ad0c0}
+.lb-spacer{flex:1}
+#lb-bar button{background:#232b33;color:#e6edf3;border:1px solid #384049;border-radius:5px;padding:3px 11px;font-size:14px;cursor:pointer;line-height:1.2}
+#lb-bar button:hover{background:#2e3842}
+#lb-zoom{min-width:52px;text-align:center;font-variant-numeric:tabular-nums}
+#lb-stage{flex:1;overflow:hidden;display:flex;align-items:center;justify-content:center;touch-action:none}
+#lb-content{transform-origin:center center;will-change:transform;cursor:crosshair;display:flex;gap:14px;align-items:flex-start}
+#lb-content.grabbing{cursor:grabbing}
+.lb-pane{position:relative;display:block}
+.lb-pane.hidden{display:none}
+#lb-content img{display:block;max-width:none;max-height:none;user-select:none;-webkit-user-drag:none;background:#fff}
+.lb-marker{position:absolute;border:2px solid #ff3b3b;box-shadow:0 0 0 1px rgba(255,255,255,.9),0 0 10px 2px rgba(255,59,59,.55);pointer-events:none;box-sizing:border-box;z-index:2}
+.lb-marker.hidden{display:none}
+td.locate{cursor:zoom-in;color:var(--accent)}
+td.locate:hover{background:#eef4fb;text-decoration:underline}
+</style></head><body>
+<header><h1>PDF sample report — 02_p3_reflow_below</h1><nav><a href="#identity">Identity</a><a href="#gt">Ground truth</a><a href="#algo">Algorithm</a><a href="#alignment">Alignment</a><a href="#summary">Summary</a><a href="#pairs">Pairs</a><a href="#diag">Diagnostics</a><a href="#artifacts">Artifacts</a></nav></header>
+<main><section id="identity"><h2>1 &middot; Identity</h2>
+<table class="kv">
+<tr><th>case</th><td>02_p3_reflow_below</td><th>kind</th><td>real</td></tr>
+<tr><th>input folder</th><td colspan="3" class="mono path">C:\Users\yoav\devel\applitools\bin\tests\images\PDFs\real\edited\02_p3_reflow_below</td></tr>
+<tr><th>output folder</th><td colspan="3" class="mono path">C:\Users\yoav\testres\pdf\e2e_261006\02_p3_reflow_below_20261006-135325-d56eee</td></tr>
+<tr><th>source</th><td colspan="3">v1.pdf</td></tr>
+<tr><th>render DPI</th><td>96.0</td>
+    <th>units</th><td>px</td></tr>
+<tr><th>baseline (v1)</th><td>794&times;1123 px, axTree=True</td>
+    <th>checkpoint (v2)</th><td>794&times;1123 px, axTree=True</td></tr>
+<tr><th>pipeline commit</th><td colspan="3" class="mono">ec8da6889</td></tr>
+</table></section><section id="gt"><h2>2 &middot; Ground truth</h2><table class="rec"><tr><th>type</th><th>granularity</th><th>v1 page</th><th>description</th><th>expected region</th></tr><tr><td>insert</td><td>paragraph</td><td>3</td><td>Two new sections inserted after Section 25: &#x27;INSERTED A.&#x27; and &#x27;INSERTED B.&#x27; (INSERTED B ends with the italic phrase &#x27;New content.&#x27;). Content below reflows down; page 3 now ends at Section 31 (was Section 33), and Sections 32-33 overflow onto a newly inserted page.</td><td>page 3 body, after Section 25; the reflow-below overflow (Sections 32-33) lands on the inserted page (v2 page 4)</td></tr></table><details><summary>provenance.md</summary><div class="mdbox"><h3>Provenance — 02_p3_reflow_below</h3>
+
+<p>Real-PDF labelled pair (Story 1.13). v2.pdf was produced by an <strong>external</strong></p>
+<p>editor and is frozen; this harness applies no edits of its own.</p>
+
+<h3>Pair</h3>
+<ul>
+<li>v1 (baseline): <code>v1.pdf</code></li>
+<li>v2 (checkpoint): <code>v2.pdf</code></li>
+<li>Alignment + edits GT source: page-count draft (no --gt supplied; finalize via montage)</li>
+</ul>
+
+<h3>v2 authoring — TODO (author fills)</h3>
+<ul>
+<li>Editor / tool + version: _TODO (e.g. Acrobat Pro 2024.x / pikepdf 9.x / Word re-export)_</li>
+<li>v1 source distribution / origin: _TODO_</li>
+</ul>
+
+<h3>Producers (harness-stamped)</h3>
+<ul>
+<li>AXTree extractor: <code>@applitools/ax-tree@1.2.1</code> via <code>extract-axtree/extract.mjs</code> (toJSON verbatim, Variant A camelCase)</li>
+<li>Rasterizer: <code>pypdfium2==(see requirements.txt)</code> via <code>rasterize.py</code> at 96 DPI</li>
+</ul>
+
+<h3>Determinism (NFR5)</h3>
+<p>Both producers are deterministic on frozen PDFs. The only non-determinism is</p>
+<p>inside the external <code>@applitools/ax-tree</code> extractor (out of our control); the</p>
+<p>harness itself adds no timestamps/RNG.</p></div></details></section><section id="algo"><h2>3 &middot; Algorithm</h2>
+<table class="kv">
+<tr><th>matcher</th><td>Strict</td></tr>
+<tr><th>dynamic</th><td>Dynamic mode: <b>ON</b></td></tr>
+<tr><th>overflow settings</th><td class="mono">vTol=2 &middot;
+    hTol=2 &middot;
+    maxVSearch=200 &middot;
+    minNbrText=3 &middot;
+    aggregateRawDiffs=True</td></tr>
+</table></section><section id="alignment"><h2>4 &middot; Page alignment</h2>
+<p><b>5</b> v1 pages &middot; <b>6</b> v2 pages &middot; <b>5</b> matched pairs &middot; inserted (v2-only): <span class="mono">[3]</span> &middot; deleted (v1-only): <span class="mono">[]</span></p><table class="rec"><tr><th>pair</th><th>pages</th><th>disposition</th><th>classified diffs</th></tr><tr><td>0</td><td class="mono">v1 p0 &harr; v2 p0</td><td>identical</td><td>0</td></tr><tr><td>1</td><td class="mono">v1 p1 &harr; v2 p1</td><td>identical</td><td>0</td></tr><tr><td>2</td><td class="mono">v1 p2 &harr; v2 p2</td><td>modified</td><td>17</td></tr><tr><td>3</td><td class="mono">v1 p3 &harr; v2 p4</td><td>identical</td><td>0</td></tr><tr><td>4</td><td class="mono">v1 p4 &harr; v2 p5</td><td>identical</td><td>0</td></tr></table><details><summary>alignment summary</summary><pre class="mono summary">case: 02_p3_reflow_below
+v1 pages: 5   v2 pages: 6
+matched pairs: 5   v1-only (deleted): []   v2-only (inserted): [3]
+total classified page diffs (over matched pairs): 17
+  alerting (real diff):     2   [Changed/Inserted/Deleted/Modified — IsAlerting()]
+  dynamic content:          0   [reported, never alerts]
+  document furniture:       0   [reported, never alerts]
+  content shift (overflow): 2   [crossed a page boundary; user confirms]
+  displacement (filtered):  13   [same-page move; not surfaced]
+dynamic: ON (--no-dynamic to disable)
+
+  pair v1#0 &lt;-&gt; v2#0: MATCH (no diffs) -&gt; result.json + overflow-trace.json
+  pair v1#1 &lt;-&gt; v2#1: MATCH (no diffs) -&gt; result.json + overflow-trace.json
+  pair v1#2 &lt;-&gt; v2#2: 215 raw -&gt; 15 aggregated -&gt; 17 classified   (pair-02-v1p2-v2p2/: matcher/ raw, overflow/ classified+aggregation)
+  pair v1#3 &lt;-&gt; v2#4: MATCH (no diffs) -&gt; result.json + overflow-trace.json
+  pair v1#4 &lt;-&gt; v2#5: MATCH (no diffs) -&gt; result.json + overflow-trace.json
+  inserted v2#3 -&gt; structural/inserted-v2-003.png
+</pre><h4>timeline</h4><ul class='timeline'><li>MATCH     v1#0 &lt;-&gt; v2#0 (identical)</li><li>MATCH     v1#1 &lt;-&gt; v2#1 (identical)</li><li>MODIFIED  v1#2 &lt;-&gt; v2#2 (modified)</li><li>INSERTED  v2#3 (v2-only)</li><li>MATCH     v1#3 &lt;-&gt; v2#4 (identical)</li><li>MATCH     v1#4 &lt;-&gt; v2#5 (identical)</li></ul></details>
+<p class="muted">Page cells show the <b>overlay visualization</b> (diff/displacement annotations) where available; raw renders otherwise.</p><details class="legend"><summary>overlay legend</summary><img class="legendimg zoomable" loading="lazy" alt="legend.png" src="C:/Users/yoav/devel/applitools/bin/tests/images/PDFs/real/edited/02_p3_reflow_below/overlay/v1/legend.png"></details><div class="pairgrid"><div class="paircell "><div class="pairimgs"><img class="pageimg zoomable" loading="lazy" alt="page-001.png" src="C:/Users/yoav/devel/applitools/bin/tests/images/PDFs/real/edited/02_p3_reflow_below/overlay/v1/page-001.png" data-kind="side" data-side="v1"><img class="pageimg zoomable" loading="lazy" alt="page-001.png" src="C:/Users/yoav/devel/applitools/bin/tests/images/PDFs/real/edited/02_p3_reflow_below/overlay/v2/page-001.png" data-kind="side" data-side="v2"></div><div class="paircap">pair 0 · v1 p0 ↔ v2 p0 · identical</div></div><div class="paircell "><div class="pairimgs"><img class="pageimg zoomable" loading="lazy" alt="page-002.png" src="C:/Users/yoav/devel/applitools/bin/tests/images/PDFs/real/edited/02_p3_reflow_below/overlay/v1/page-002.png" data-kind="side" data-side="v1"><img class="pageimg zoomable" loading="lazy" alt="page-002.png" src="C:/Users/yoav/devel/applitools/bin/tests/images/PDFs/real/edited/02_p3_reflow_below/overlay/v2/page-002.png" data-kind="side" data-side="v2"></div><div class="paircap">pair 1 · v1 p1 ↔ v2 p1 · identical</div></div><div class="paircell "><div class="pairimgs"><img class="pageimg zoomable" loading="lazy" alt="page-003.png" src="C:/Users/yoav/devel/applitools/bin/tests/images/PDFs/real/edited/02_p3_reflow_below/overlay/v1/page-003.png" data-kind="side" data-side="v1"><img class="pageimg zoomable" loading="lazy" alt="page-003.png" src="C:/Users/yoav/devel/applitools/bin/tests/images/PDFs/real/edited/02_p3_reflow_below/overlay/v2/page-003.png" data-kind="side" data-side="v2"></div><div class="paircap">pair 2 · v1 p2 ↔ v2 p2 · modified · 17 diffs</div></div><div class="paircell "><div class="pairimgs"><img class="pageimg zoomable" loading="lazy" alt="page-004.png" src="C:/Users/yoav/devel/applitools/bin/tests/images/PDFs/real/edited/02_p3_reflow_below/overlay/v1/page-004.png" data-kind="side" data-side="v1"><img class="pageimg zoomable" loading="lazy" alt="page-005.png" src="C:/Users/yoav/devel/applitools/bin/tests/images/PDFs/real/edited/02_p3_reflow_below/overlay/v2/page-005.png" data-kind="side" data-side="v2"></div><div class="paircap">pair 3 · v1 p3 ↔ v2 p4 · identical</div></div><div class="paircell "><div class="pairimgs"><img class="pageimg zoomable" loading="lazy" alt="page-005.png" src="C:/Users/yoav/devel/applitools/bin/tests/images/PDFs/real/edited/02_p3_reflow_below/overlay/v1/page-005.png" data-kind="side" data-side="v1"><img class="pageimg zoomable" loading="lazy" alt="page-006.png" src="C:/Users/yoav/devel/applitools/bin/tests/images/PDFs/real/edited/02_p3_reflow_below/overlay/v2/page-006.png" data-kind="side" data-side="v2"></div><div class="paircap">pair 4 · v1 p4 ↔ v2 p5 · identical</div></div><div class="paircell inserted"><div class="pairimgs"><div class="pageslot">&mdash;</div><img class="pageimg zoomable" loading="lazy" alt="page-004.png" src="C:/Users/yoav/devel/applitools/bin/tests/images/PDFs/real/edited/02_p3_reflow_below/overlay/v2/page-004.png" data-kind="side" data-side="v2"></div><div class="paircap">inserted · v2 p3</div></div></div>
+</section><section id="summary"><h2>5 &middot; Result summary</h2>
+<p class="muted">Emitted records aggregated across 5 pair(s). Pruned records excluded (see Diagnostics).</p>
+<div class="cols3">
+  <div><h4>by DiffCause</h4><div class="barrow"><span class="barlabel">DisplacedDown</span><span class="bartrack"><span class="barfill" style="width:76.5%;background:#2e7d32"></span></span><span class="barval">13</span></div><div class="barrow"><span class="barlabel">Inserted</span><span class="bartrack"><span class="barfill" style="width:11.8%;background:#78909c"></span></span><span class="barval">2</span></div><div class="barrow"><span class="barlabel">OverflowToNext</span><span class="bartrack"><span class="barfill" style="width:11.8%;background:#00838f"></span></span><span class="barval">2</span></div></div>
+  <div><h4>by frame</h4><div class="barrow"><span class="barlabel">baseline</span><span class="bartrack"><span class="barfill" style="width:88.2%;background:#1565c0"></span></span><span class="barval">15</span></div><div class="barrow"><span class="barlabel">checkpoint</span><span class="bartrack"><span class="barfill" style="width:11.8%;background:#00838f"></span></span><span class="barval">2</span></div></div>
+  <div><h4>by mechanism</h4><div class="barrow"><span class="barlabel">M1Block</span><span class="bartrack"><span class="barfill" style="width:76.5%;background:#455a64"></span></span><span class="barval">13</span></div><div class="barrow"><span class="barlabel">Band</span><span class="bartrack"><span class="barfill" style="width:11.8%;background:#455a64"></span></span><span class="barval">2</span></div><div class="barrow"><span class="barlabel">None</span><span class="bartrack"><span class="barfill" style="width:11.8%;background:#455a64"></span></span><span class="barval">2</span></div></div>
+</div></section><section id="pairs"><h2>6 &middot; Per-pair detail</h2><details class="pair" open>
+<summary>Pair 0 &nbsp; v1 p0 &harr; v2 p0 &nbsp; <span class="chips"><span class="muted">no diffs</span></span></summary>
+<div class="imgrow"></div>
+
+<p class="muted">0 emitted &middot; 0 pruned &middot; raw=0 &middot; aggregated=0</p>
+<p class="muted">Verified against the returned PageMatchResult: 0 returned PageDiffs, 0 table rows marked V.</p><p class="retv"><b>Verification passed:</b> every returned PageDiff is in the table and every non-returned row is pruned.</p><p class="muted">no records</p>
+</details><details class="pair" >
+<summary>Pair 1 &nbsp; v1 p1 &harr; v2 p1 &nbsp; <span class="chips"><span class="muted">no diffs</span></span></summary>
+<div class="imgrow"></div>
+
+<p class="muted">0 emitted &middot; 0 pruned &middot; raw=0 &middot; aggregated=0</p>
+<p class="muted">Verified against the returned PageMatchResult: 0 returned PageDiffs, 0 table rows marked V.</p><p class="retv"><b>Verification passed:</b> every returned PageDiff is in the table and every non-returned row is pruned.</p><p class="muted">no records</p>
+</details><details class="pair" >
+<summary>Pair 2 &nbsp; v1 p2 &harr; v2 p2 &nbsp; <span class="chips"><span class="tagchip" style="background:#2e7d32">DisplacedDown 13</span><span class="tagchip" style="background:#78909c">Inserted 2</span><span class="tagchip" style="background:#00838f">OverflowToNext 2</span></span></summary>
+<div class="imgrow"><div class="imgcell"><img class="plot zoomable" loading="lazy" alt="raw-diff.png" src="pair-02-v1p2-v2p2/matcher/raw-diff.png" data-kind="plot" data-gap="1" data-v1w="794" data-v2w="794"><div class="cap">raw-diff.png</div></div><div class="imgcell"><img class="plot zoomable" loading="lazy" alt="aggregation.png" src="pair-02-v1p2-v2p2/overflow/aggregation.png" data-kind="plot" data-gap="1" data-v1w="794" data-v2w="794"><div class="cap">aggregation.png</div></div><div class="imgcell"><img class="plot zoomable" loading="lazy" alt="visual-lines.png" src="pair-02-v1p2-v2p2/overflow/visual-lines.png" data-kind="plot" data-gap="1" data-v1w="794" data-v2w="794"><div class="cap">visual-lines.png</div></div><div class="imgcell"><img class="plot zoomable" loading="lazy" alt="overflow.png" src="pair-02-v1p2-v2p2/overflow/overflow.png" data-kind="plot" data-gap="1" data-v1w="794" data-v2w="794"><div class="cap">overflow.png</div></div><div class="imgcell"><img class="plot zoomable" loading="lazy" alt="change-vs-move.png" src="pair-02-v1p2-v2p2/overflow/change-vs-move.png" data-kind="plot" data-gap="1" data-v1w="794" data-v2w="794"><div class="cap">change-vs-move.png</div></div><div class="imgcell"><img class="plot zoomable" loading="lazy" alt="fragment-tags.png" src="pair-02-v1p2-v2p2/overflow/fragment-tags.png" data-kind="plot" data-gap="1" data-v1w="794" data-v2w="794"><div class="cap">fragment-tags.png</div></div></div>
+<p class="retv"><b>fragment-tags.png verified against fragments.json</b> <span class="muted">(219 fragments; border colour checked on 76 fragment-sides (362 not checkable: overlapped by other borders))</span></p>
+<p class="muted">17 emitted &middot; 2 pruned &middot; raw=215 &middot; aggregated=15</p>
+<p class="muted">Verified against the returned PageMatchResult: 17 returned PageDiffs, 17 table rows marked V.</p><p class="retv"><b>Verification passed:</b> every returned PageDiff is in the table and every non-returned row is pruned.</p><table class="rec"><tr><th title="V = a PageDiff with this cause and rect is in the matcher's returned result (page-diffs.json); X = not returned">ret</th><th>id</th><th>parent</th><th>block</th><th>tag</th><th>mechanism</th><th>frame</th><th>baseline rect (v1)</th><th>checkpoint rect (v2)</th><th>approved off</th><th>pruned</th></tr><tr class=""><td class="ret retv">V</td><td>230</td><td>215</td><td>0</td><td><span class="tagchip" style="background:#2e7d32">DisplacedDown</span></td><td>M1Block</td><td><span class="framechip" style="background:#1565c0">baseline</span></td><td class="mono locate" title="click to locate on plot (v1)" data-side="v1" data-x="91" data-y="227" data-w="75" data-h="15" data-label="id 230 DisplacedDown">91,227 75×15</td><td class="mono locate" title="click to locate on plot (v2)" data-side="v2" data-x="91" data-y="322" data-w="75" data-h="15" data-label="id 230 DisplacedDown">91,322 75×15</td><td class="mono">(0, 95)</td><td>no</td></tr><tr class=""><td class="ret retv">V</td><td>231</td><td>215</td><td>1</td><td><span class="tagchip" style="background:#78909c">Inserted</span></td><td>None</td><td><span class="framechip" style="background:#00838f">checkpoint</span></td><td class="mono">—</td><td class="mono locate" title="click to locate on plot (v2)" data-side="v2" data-x="91" data-y="227" data-w="584" data-h="35" data-label="id 231 Inserted">91,227 584×35</td><td class="mono">—</td><td>no</td></tr><tr class=""><td class="ret retv">V</td><td>232</td><td>216</td><td>2</td><td><span class="tagchip" style="background:#2e7d32">DisplacedDown</span></td><td>M1Block</td><td><span class="framechip" style="background:#1565c0">baseline</span></td><td class="mono locate" title="click to locate on plot (v1)" data-side="v1" data-x="168" data-y="227" data-w="492" data-h="15" data-label="id 232 DisplacedDown">168,227 492×15</td><td class="mono locate" title="click to locate on plot (v2)" data-side="v2" data-x="168" data-y="322" data-w="492" data-h="15" data-label="id 232 DisplacedDown">168,322 492×15</td><td class="mono">(0, 95)</td><td>no</td></tr><tr class=""><td class="ret retv">V</td><td>233</td><td>217</td><td>3</td><td><span class="tagchip" style="background:#2e7d32">DisplacedDown</span></td><td>M1Block</td><td><span class="framechip" style="background:#1565c0">baseline</span></td><td class="mono locate" title="click to locate on plot (v1)" data-side="v1" data-x="183" data-y="227" data-w="492" data-h="15" data-label="id 233 DisplacedDown">183,227 492×15</td><td class="mono locate" title="click to locate on plot (v2)" data-side="v2" data-x="183" data-y="322" data-w="492" data-h="15" data-label="id 233 DisplacedDown">183,322 492×15</td><td class="mono">(0, 95)</td><td>no</td></tr><tr class=""><td class="ret retv">V</td><td>234</td><td>218</td><td>4</td><td><span class="tagchip" style="background:#2e7d32">DisplacedDown</span></td><td>M1Block</td><td><span class="framechip" style="background:#1565c0">baseline</span></td><td class="mono locate" title="click to locate on plot (v1)" data-side="v1" data-x="91" data-y="247" data-w="434" data-h="15" data-label="id 234 DisplacedDown">91,247 434×15</td><td class="mono locate" title="click to locate on plot (v2)" data-side="v2" data-x="91" data-y="342" data-w="434" data-h="15" data-label="id 234 DisplacedDown">91,342 434×15</td><td class="mono">(0, 95)</td><td>no</td></tr><tr class=""><td class="ret retv">V</td><td>235</td><td>220</td><td>5</td><td><span class="tagchip" style="background:#2e7d32">DisplacedDown</span></td><td>M1Block</td><td><span class="framechip" style="background:#1565c0">baseline</span></td><td class="mono locate" title="click to locate on plot (v1)" data-side="v1" data-x="91" data-y="275" data-w="75" data-h="15" data-label="id 235 DisplacedDown">91,275 75×15</td><td class="mono locate" title="click to locate on plot (v2)" data-side="v2" data-x="91" data-y="370" data-w="75" data-h="15" data-label="id 235 DisplacedDown">91,370 75×15</td><td class="mono">(0, 95)</td><td>no</td></tr><tr class=""><td class="ret retv">V</td><td>236</td><td>220</td><td>6</td><td><span class="tagchip" style="background:#78909c">Inserted</span></td><td>None</td><td><span class="framechip" style="background:#00838f">checkpoint</span></td><td class="mono">—</td><td class="mono locate" title="click to locate on plot (v2)" data-side="v2" data-x="91" data-y="275" data-w="584" data-h="35" data-label="id 236 Inserted">91,275 584×35</td><td class="mono">—</td><td>no</td></tr><tr class=""><td class="ret retv">V</td><td>237</td><td>221</td><td>7</td><td><span class="tagchip" style="background:#2e7d32">DisplacedDown</span></td><td>M1Block</td><td><span class="framechip" style="background:#1565c0">baseline</span></td><td class="mono locate" title="click to locate on plot (v1)" data-side="v1" data-x="168" data-y="275" data-w="492" data-h="15" data-label="id 237 DisplacedDown">168,275 492×15</td><td class="mono locate" title="click to locate on plot (v2)" data-side="v2" data-x="168" data-y="370" data-w="492" data-h="15" data-label="id 237 DisplacedDown">168,370 492×15</td><td class="mono">(0, 95)</td><td>no</td></tr><tr class=""><td class="ret retv">V</td><td>238</td><td>222</td><td>8</td><td><span class="tagchip" style="background:#2e7d32">DisplacedDown</span></td><td>M1Block</td><td><span class="framechip" style="background:#1565c0">baseline</span></td><td class="mono locate" title="click to locate on plot (v1)" data-side="v1" data-x="183" data-y="275" data-w="492" data-h="15" data-label="id 238 DisplacedDown">183,275 492×15</td><td class="mono locate" title="click to locate on plot (v2)" data-side="v2" data-x="183" data-y="370" data-w="492" data-h="15" data-label="id 238 DisplacedDown">183,370 492×15</td><td class="mono">(0, 95)</td><td>no</td></tr><tr class=""><td class="ret retv">V</td><td>239</td><td>223</td><td>9</td><td><span class="tagchip" style="background:#2e7d32">DisplacedDown</span></td><td>M1Block</td><td><span class="framechip" style="background:#1565c0">baseline</span></td><td class="mono locate" title="click to locate on plot (v1)" data-side="v1" data-x="91" data-y="295" data-w="434" data-h="15" data-label="id 239 DisplacedDown">91,295 434×15</td><td class="mono locate" title="click to locate on plot (v2)" data-side="v2" data-x="91" data-y="390" data-w="434" data-h="15" data-label="id 239 DisplacedDown">91,390 434×15</td><td class="mono">(0, 95)</td><td>no</td></tr><tr class=""><td class="ret retv">V</td><td>240</td><td>225</td><td>10</td><td><span class="tagchip" style="background:#2e7d32">DisplacedDown</span></td><td>M1Block</td><td><span class="framechip" style="background:#1565c0">baseline</span></td><td class="mono locate" title="click to locate on plot (v1)" data-side="v1" data-x="91" data-y="371" data-w="75" data-h="15" data-label="id 240 DisplacedDown">91,371 75×15</td><td class="mono locate" title="click to locate on plot (v2)" data-side="v2" data-x="91" data-y="466" data-w="75" data-h="15" data-label="id 240 DisplacedDown">91,466 75×15</td><td class="mono">(0, 95)</td><td>no</td></tr><tr class=""><td class="ret retv">V</td><td>241</td><td>226</td><td>11</td><td><span class="tagchip" style="background:#2e7d32">DisplacedDown</span></td><td>M1Block</td><td><span class="framechip" style="background:#1565c0">baseline</span></td><td class="mono locate" title="click to locate on plot (v1)" data-side="v1" data-x="91" data-y="419" data-w="75" data-h="15" data-label="id 241 DisplacedDown">91,419 75×15</td><td class="mono locate" title="click to locate on plot (v2)" data-side="v2" data-x="91" data-y="514" data-w="75" data-h="15" data-label="id 241 DisplacedDown">91,514 75×15</td><td class="mono">(0, 95)</td><td>no</td></tr><tr class=""><td class="ret retv">V</td><td>242</td><td>227</td><td>12</td><td><span class="tagchip" style="background:#2e7d32">DisplacedDown</span></td><td>M1Block</td><td><span class="framechip" style="background:#1565c0">baseline</span></td><td class="mono locate" title="click to locate on plot (v1)" data-side="v1" data-x="91" data-y="467" data-w="75" data-h="15" data-label="id 242 DisplacedDown">91,467 75×15</td><td class="mono locate" title="click to locate on plot (v2)" data-side="v2" data-x="91" data-y="562" data-w="75" data-h="15" data-label="id 242 DisplacedDown">91,562 75×15</td><td class="mono">(0, 95)</td><td>no</td></tr><tr class=""><td class="ret retv">V</td><td>243</td><td>228</td><td>13</td><td><span class="tagchip" style="background:#2e7d32">DisplacedDown</span></td><td>M1Block</td><td><span class="framechip" style="background:#1565c0">baseline</span></td><td class="mono locate" title="click to locate on plot (v1)" data-side="v1" data-x="91" data-y="420" data-w="75" data-h="15" data-label="id 243 DisplacedDown">91,420 75×15</td><td class="mono locate" title="click to locate on plot (v2)" data-side="v2" data-x="91" data-y="515" data-w="75" data-h="15" data-label="id 243 DisplacedDown">91,515 75×15</td><td class="mono">(0, 95)</td><td>no</td></tr><tr class=""><td class="ret retv">V</td><td>244</td><td>228</td><td>14</td><td><span class="tagchip" style="background:#00838f">OverflowToNext</span></td><td>Band</td><td><span class="framechip" style="background:#1565c0">baseline</span></td><td class="mono locate" title="click to locate on plot (v1)" data-side="v1" data-x="91" data-y="515" data-w="569" data-h="35" data-label="id 244 OverflowToNext">91,515 569×35</td><td class="mono">—</td><td class="mono">—</td><td>no</td></tr><tr class=""><td class="ret retv">V</td><td>245</td><td>229</td><td>15</td><td><span class="tagchip" style="background:#2e7d32">DisplacedDown</span></td><td>M1Block</td><td><span class="framechip" style="background:#1565c0">baseline</span></td><td class="mono locate" title="click to locate on plot (v1)" data-side="v1" data-x="91" data-y="468" data-w="75" data-h="15" data-label="id 245 DisplacedDown">91,468 75×15</td><td class="mono locate" title="click to locate on plot (v2)" data-side="v2" data-x="91" data-y="563" data-w="75" data-h="15" data-label="id 245 DisplacedDown">91,563 75×15</td><td class="mono">(0, 95)</td><td>no</td></tr><tr class=""><td class="ret retv">V</td><td>246</td><td>229</td><td>16</td><td><span class="tagchip" style="background:#00838f">OverflowToNext</span></td><td>Band</td><td><span class="framechip" style="background:#1565c0">baseline</span></td><td class="mono locate" title="click to locate on plot (v1)" data-side="v1" data-x="91" data-y="563" data-w="569" data-h="35" data-label="id 246 OverflowToNext">91,563 569×35</td><td class="mono">—</td><td class="mono">—</td><td>no</td></tr><tr class="prunedrow"><td class="ret retx">X</td><td>247</td><td>219</td><td>-1</td><td><span class="tagchip" style="background:#78909c">Inserted</span></td><td>None</td><td><span class="framechip" style="background:#00838f">checkpoint</span></td><td class="mono">—</td><td class="mono locate" title="click to locate on plot (v2)" data-side="v2" data-x="528" data-y="247" data-w="83" data-h="15" data-label="id 247 Inserted">528,247 83×15</td><td class="mono">—</td><td><span class="pruned">yes</span> <span class="muted">nested-grain</span></td></tr><tr class="prunedrow"><td class="ret retx">X</td><td>248</td><td>224</td><td>-1</td><td><span class="tagchip" style="background:#78909c">Inserted</span></td><td>None</td><td><span class="framechip" style="background:#00838f">checkpoint</span></td><td class="mono">—</td><td class="mono locate" title="click to locate on plot (v2)" data-side="v2" data-x="528" data-y="295" data-w="83" data-h="15" data-label="id 248 Inserted">528,295 83×15</td><td class="mono">—</td><td><span class="pruned">yes</span> <span class="muted">nested-grain</span></td></tr></table>
+</details><details class="pair" >
+<summary>Pair 3 &nbsp; v1 p3 &harr; v2 p4 &nbsp; <span class="chips"><span class="muted">no diffs</span></span></summary>
+<div class="imgrow"></div>
+
+<p class="muted">0 emitted &middot; 0 pruned &middot; raw=0 &middot; aggregated=0</p>
+<p class="muted">Verified against the returned PageMatchResult: 0 returned PageDiffs, 0 table rows marked V.</p><p class="retv"><b>Verification passed:</b> every returned PageDiff is in the table and every non-returned row is pruned.</p><p class="muted">no records</p>
+</details><details class="pair" >
+<summary>Pair 4 &nbsp; v1 p4 &harr; v2 p5 &nbsp; <span class="chips"><span class="muted">no diffs</span></span></summary>
+<div class="imgrow"></div>
+
+<p class="muted">0 emitted &middot; 0 pruned &middot; raw=0 &middot; aggregated=0</p>
+<p class="muted">Verified against the returned PageMatchResult: 0 returned PageDiffs, 0 table rows marked V.</p><p class="retv"><b>Verification passed:</b> every returned PageDiff is in the table and every non-returned row is pruned.</p><p class="muted">no records</p>
+</details></section><section id="diag"><h2>7 &middot; Diagnostics</h2><details class="pair"><summary>Pair 0 evidence</summary><h4>Causal field</h4><p class="mono muted">crossBase=0 · bottomShift=0 · crossForward=False · crossBackward=False</p><p class="muted">empty field (no AXTree blocks)</p></details><details class="pair"><summary>Pair 1 evidence</summary><h4>Causal field</h4><p class="mono muted">crossBase=0 · bottomShift=0 · crossForward=False · crossBackward=False</p><p class="muted">empty field (no AXTree blocks)</p></details><details class="pair"><summary>Pair 2 evidence</summary><h4>Pruned records (2)</h4><table class="rec"><tr><th>id</th><th>tag</th><th>reason</th><th>rect</th></tr><tr><td>247</td><td>Inserted</td><td>nested-grain</td><td class="mono">528,247 83×15</td></tr><tr><td>248</td><td>Inserted</td><td>nested-grain</td><td class="mono">528,295 83×15</td></tr></table><h4>Offset search</h4><table class="rec"><tr><th>rec</th><th>tag</th><th>candidates</th><th>rejected</th><th>approved</th></tr><tr><td>230</td><td>DisplacedDown</td><td class="mono">(0, 94), (0, 95)</td><td class="mono">(0, 94):pixel-reject</td><td class="mono">(0, 95)</td></tr><tr><td>232</td><td>DisplacedDown</td><td class="mono">(0, 94), (0, 95)</td><td class="mono">(0, 94):pixel-reject</td><td class="mono">(0, 95)</td></tr><tr><td>233</td><td>DisplacedDown</td><td class="mono">(0, 94), (0, 95)</td><td class="mono">(0, 94):pixel-reject</td><td class="mono">(0, 95)</td></tr><tr><td>234</td><td>DisplacedDown</td><td class="mono">(0, 94), (0, 95)</td><td class="mono">(0, 94):pixel-reject</td><td class="mono">(0, 95)</td></tr><tr><td>235</td><td>DisplacedDown</td><td class="mono">(0, 94), (0, 95)</td><td class="mono">(0, 94):pixel-reject</td><td class="mono">(0, 95)</td></tr><tr><td>237</td><td>DisplacedDown</td><td class="mono">(0, 94), (0, 95)</td><td class="mono">(0, 94):pixel-reject</td><td class="mono">(0, 95)</td></tr><tr><td>238</td><td>DisplacedDown</td><td class="mono">(0, 94), (0, 95)</td><td class="mono">(0, 94):pixel-reject</td><td class="mono">(0, 95)</td></tr><tr><td>239</td><td>DisplacedDown</td><td class="mono">(0, 94), (0, 95)</td><td class="mono">(0, 94):pixel-reject</td><td class="mono">(0, 95)</td></tr><tr><td>240</td><td>DisplacedDown</td><td class="mono">(0, 94), (0, 95)</td><td class="mono">(0, 94):pixel-reject</td><td class="mono">(0, 95)</td></tr><tr><td>241</td><td>DisplacedDown</td><td class="mono">(0, 94), (0, 95)</td><td class="mono">(0, 94):pixel-reject</td><td class="mono">(0, 95)</td></tr><tr><td>242</td><td>DisplacedDown</td><td class="mono">(0, 94), (0, 95)</td><td class="mono">(0, 94):pixel-reject</td><td class="mono">(0, 95)</td></tr><tr><td>243</td><td>DisplacedDown</td><td class="mono">(0, 94), (0, 95)</td><td class="mono">(0, 94):pixel-reject</td><td class="mono">(0, 95)</td></tr><tr><td>245</td><td>DisplacedDown</td><td class="mono">(0, 94), (0, 95)</td><td class="mono">(0, 94):pixel-reject</td><td class="mono">(0, 95)</td></tr><tr><td>247</td><td>Inserted</td><td class="mono">(0, 94), (0, 95), (0, 96), (0, 97), (0, 98)</td><td class="mono">(0, 94):blank-crop, (0, 95):blank-crop, (0, 96):blank-crop, (0, 97):blank-crop, (0, 98):blank-crop</td><td class="mono">—</td></tr><tr><td>248</td><td>Inserted</td><td class="mono">(0, 94), (0, 95), (0, 96), (0, 97), (0, 98)</td><td class="mono">(0, 94):blank-crop, (0, 95):blank-crop, (0, 96):blank-crop, (0, 97):blank-crop, (0, 98):blank-crop</td><td class="mono">—</td></tr></table><h4>Causal field</h4><p class="mono muted">crossBase=0 · bottomShift=96 · crossForward=True · crossBackward=False</p><table class="rec"><tr><th>top</th><th>dy</th><th>order</th><th>block key</th></tr><tr><td class="mono">0</td><td class="mono">0</td><td>0</td><td class="clip">Section 23. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</td></tr><tr><td class="mono">118</td><td class="mono">0</td><td>1</td><td class="clip">Section 24. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</td></tr><tr><td class="mono">166</td><td class="mono">0</td><td>2</td><td class="clip">Section 25. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</td></tr><tr><td class="mono">214</td><td class="mono">96</td><td>5</td><td class="clip">Section 26. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</td></tr><tr><td class="mono">262</td><td class="mono">96</td><td>6</td><td class="clip">Section 27. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</td></tr><tr><td class="mono">310</td><td class="mono">96</td><td>7</td><td class="clip">Section 28. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</td></tr><tr><td class="mono">358</td><td class="mono">96</td><td>8</td><td class="clip">Section 29. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</td></tr><tr><td class="mono">406</td><td class="mono">96</td><td>9</td><td class="clip">Section 30. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</td></tr><tr><td class="mono">454</td><td class="mono">96</td><td>10</td><td class="clip">Section 31. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</td></tr></table></details><details class="pair"><summary>Pair 3 evidence</summary><h4>Causal field</h4><p class="mono muted">crossBase=0 · bottomShift=0 · crossForward=False · crossBackward=False</p><p class="muted">empty field (no AXTree blocks)</p></details><details class="pair"><summary>Pair 4 evidence</summary><h4>Causal field</h4><p class="mono muted">crossBase=0 · bottomShift=0 · crossForward=False · crossBackward=False</p><p class="muted">empty field (no AXTree blocks)</p></details></section><section id="artifacts"><h2>8 &middot; Artifacts index</h2><ul class="artifacts"><li><a href="run.json" target="_blank" rel="noopener">run.json</a> <span class="muted">(run manifest)</span></li><li><a href="alignment.json" target="_blank" rel="noopener">alignment.json</a> <span class="muted">(page alignment)</span></li><li><a href="pair-00-v1p0-v2p0/overflow-trace.json" target="_blank" rel="noopener">overflow-trace.json</a></li><li><a href="pair-01-v1p1-v2p1/overflow-trace.json" target="_blank" rel="noopener">overflow-trace.json</a></li><li><a href="pair-02-v1p2-v2p2/overflow/overflow-trace.json" target="_blank" rel="noopener">overflow-trace.json</a> &middot; <a href="pair-02-v1p2-v2p2/matcher/raw-diff.png" target="_blank" rel="noopener">raw-diff.png</a> &middot; <a href="pair-02-v1p2-v2p2/overflow/overflow.png" target="_blank" rel="noopener">overflow.png</a> &middot; <a href="pair-02-v1p2-v2p2/overflow/change-vs-move.png" target="_blank" rel="noopener">change-vs-move.png</a> &middot; <a href="pair-02-v1p2-v2p2/overflow/fragment-tags.png" target="_blank" rel="noopener">fragment-tags.png</a> &middot; <a href="pair-02-v1p2-v2p2/overflow/aggregation.png" target="_blank" rel="noopener">aggregation.png</a> &middot; <a href="pair-02-v1p2-v2p2/overflow/visual-lines.png" target="_blank" rel="noopener">visual-lines.png</a></li><li><a href="pair-03-v1p3-v2p4/overflow-trace.json" target="_blank" rel="noopener">overflow-trace.json</a></li><li><a href="pair-04-v1p4-v2p5/overflow-trace.json" target="_blank" rel="noopener">overflow-trace.json</a></li><li><a href="result.txt" target="_blank" rel="noopener">result.txt</a> <span class="muted">(output summary)</span></li><li><a href="file:///C:/Users/yoav/devel/applitools/bin/tests/images/PDFs/real/edited/02_p3_reflow_below/edits.json" target="_blank" rel="noopener">edits.json</a> <span class="muted">(input)</span></li><li><a href="file:///C:/Users/yoav/devel/applitools/bin/tests/images/PDFs/real/edited/02_p3_reflow_below/provenance.md" target="_blank" rel="noopener">provenance.md</a> <span class="muted">(input)</span></li><li><a href="file:///C:/Users/yoav/devel/applitools/bin/tests/images/PDFs/real/edited/02_p3_reflow_below/v1.pdf" target="_blank" rel="noopener">v1.pdf</a> <span class="muted">(input)</span></li><li><a href="file:///C:/Users/yoav/devel/applitools/bin/tests/images/PDFs/real/edited/02_p3_reflow_below/v2.pdf" target="_blank" rel="noopener">v2.pdf</a> <span class="muted">(input)</span></li><li><a href="file:///C:/Users/yoav/devel/applitools/bin/tests/images/PDFs/real/edited/02_p3_reflow_below/v1-axtree.json" target="_blank" rel="noopener">v1-axtree.json</a> <span class="muted">(input)</span></li><li><a href="file:///C:/Users/yoav/devel/applitools/bin/tests/images/PDFs/real/edited/02_p3_reflow_below/v2-axtree.json" target="_blank" rel="noopener">v2-axtree.json</a> <span class="muted">(input)</span></li></ul><p class="muted">input: <span class="mono path">C:\Users\yoav\devel\applitools\bin\tests\images\PDFs\real\edited\02_p3_reflow_below</span><br>output: <span class="mono path">C:\Users\yoav\testres\pdf\e2e_261006\02_p3_reflow_below_20261006-135325-d56eee</span><br>Links open these local files in a new tab when viewing the local <code>report.html</code>; a shared/published copy cannot reach files on your machine.</p></section></main>
+<footer class="muted">Generated by pdf-sample-report from run.json. Assembly only — matcher not re-run.
+<br>Tip: click a page pair to view v1 &amp; v2 side by side, or any plot to zoom (mouse-wheel to scale, drag to pan, <kbd>Esc</kbd> to close). The top bar shows the cursor's page-pixel coordinate in the v1 or v2 frame it is over. In a pair's records table, click a <b>rect</b> or <b>counterpart</b> cell to box that record on the overflow plot.</footer>
+<div id="lightbox"><div id="lb-bar">
+  <span id="lb-cap"></span>
+  <span id="lb-coord" class="lb-coord"></span>
+  <span class="lb-spacer"></span>
+  <button id="lb-out" title="zoom out (-)">&minus;</button>
+  <span id="lb-zoom">100%</span>
+  <button id="lb-in" title="zoom in (+)">+</button>
+  <button id="lb-reset" title="reset (0)">reset</button>
+  <button id="lb-close" title="close (Esc)">&times;</button>
+</div><div id="lb-stage"><div id="lb-content">
+  <div class="lb-pane" id="lb-pane1"><img id="lb-img" alt=""><div class="lb-marker hidden" id="lb-mark1"></div></div>
+  <div class="lb-pane hidden" id="lb-pane2"><img id="lb-img2" alt=""><div class="lb-marker hidden" id="lb-mark2"></div></div>
+</div></div></div>
+<script>
+(function(){
+  var lb=document.getElementById('lightbox'), stage=document.getElementById('lb-stage'),
+      content=document.getElementById('lb-content'),
+      img=document.getElementById('lb-img'), img2=document.getElementById('lb-img2'),
+      pane1=document.getElementById('lb-pane1'), pane2=document.getElementById('lb-pane2'),
+      mark1=document.getElementById('lb-mark1'), mark2=document.getElementById('lb-mark2'),
+      cap=document.getElementById('lb-cap'), zl=document.getElementById('lb-zoom'),
+      coord=document.getElementById('lb-coord');
+  var PANES=[[pane1,img,mark1],[pane2,img2,mark2]];
+  var s=1, tx=0, ty=0, drag=false, moved=false, px=0, py=0, pendingMarker=null;
+  function apply(){ content.style.transform='translate('+tx+'px,'+ty+'px) scale('+s+')'; zl.textContent=Math.round(s*100)+'%'; }
+  function reset(){ s=1; tx=0; ty=0; apply(); }
+  function fit(){
+    s=1; tx=0; ty=0; apply();
+    var r=content.getBoundingClientRect(), st=stage.getBoundingClientRect();
+    if(!r.width||!r.height) return;
+    var f=Math.min((st.width-24)/r.width, (st.height-24)/r.height, 1);
+    if(f>0 && f<1){ s=f; apply(); }
+  }
+  function scheduleFit(){
+    var imgs=PANES.filter(function(p){ return !p[0].classList.contains('hidden') && p[1].src; }).map(function(p){ return p[1]; });
+    var left=imgs.length, done=function(){ if(--left<=0){ fit(); placeMarker(); } };
+    if(!left){ fit(); placeMarker(); return; }
+    imgs.forEach(function(i){ if(i.complete){ done(); } else i.addEventListener('load', done, {once:true}); });
+  }
+  // A pane's coordinate model: 'side' panes are one render (its own side); 'plot' panes are a
+  // [v1 | gap | v2 | legend] side-by-side at 1:1 page-pixel scale.
+  function geomOf(pane){ var d=pane.dataset; return {kind:d.kind, side:d.side, v1w:+d.v1w, v2w:+d.v2w, gap:+(d.gap||1)}; }
+  // Map a client point over a pane's image to page coordinates {side,x,y}, or null (gutter/legend/outside).
+  function mapPoint(pane, im, cx, cy){
+    if(!im.naturalWidth) return null;
+    var r=im.getBoundingClientRect();
+    if(cx<r.left||cx>r.right||cy<r.top||cy>r.bottom) return null;
+    var nx=(cx-r.left)/r.width*im.naturalWidth, ny=(cy-r.top)/r.height*im.naturalHeight;
+    var g=geomOf(pane);
+    if(g.kind==='side') return {side:g.side, x:Math.round(nx), y:Math.round(ny)};
+    if(nx < g.v1w) return {side:'v1', x:Math.round(nx), y:Math.round(ny)};
+    if(nx < g.v1w+g.gap) return null;
+    if(nx < g.v1w+g.gap+g.v2w) return {side:'v2', x:Math.round(nx-g.v1w-g.gap), y:Math.round(ny)};
+    return null;
+  }
+  function onMove(e){
+    if(!lb.classList.contains('open')) return;
+    var out=null;
+    for(var i=0;i<PANES.length && !out;i++){
+      if(PANES[i][0].classList.contains('hidden')) continue;
+      out=mapPoint(PANES[i][0], PANES[i][1], e.clientX, e.clientY);
+    }
+    coord.textContent = out ? (out.side+'  '+out.x+', '+out.y+' px') : '';
+    coord.className = 'lb-coord' + (out ? ' '+out.side : '');
+  }
+  // Position a marker (page-coord rect) inside the pane that owns `side`, as a % of the image.
+  function placeMarker(){
+    mark1.classList.add('hidden'); mark2.classList.add('hidden');
+    var m=pendingMarker; if(!m) return;
+    for(var i=0;i<PANES.length;i++){
+      var pane=PANES[i][0], im=PANES[i][1], mk=PANES[i][2];
+      if(pane.classList.contains('hidden') || !im.naturalWidth) continue;
+      var g=geomOf(pane);
+      var owns = g.kind==='plot' || (g.kind==='side' && g.side===m.side);
+      if(!owns) continue;
+      var ox = (g.kind==='plot' && m.side==='v2') ? g.v1w+g.gap : 0;
+      var nw=im.naturalWidth, nh=im.naturalHeight;
+      mk.style.left=(100*(m.x+ox)/nw)+'%'; mk.style.top=(100*m.y/nh)+'%';
+      mk.style.width=(100*m.w/nw)+'%';    mk.style.height=(100*m.h/nh)+'%';
+      mk.classList.remove('hidden');
+      return;
+    }
+  }
+  function showPane(pane, im, src, ds){
+    for(var k in ds) pane.dataset[k]=ds[k];
+    im.src=src||''; pane.classList.toggle('hidden', !src);
+  }
+  function openPlot(src, capText, geom, marker){
+    showPane(pane1, img, src, {kind:'plot', v1w:geom.v1w, v2w:geom.v2w, gap:geom.gap||1});
+    showPane(pane2, img2, '', {});
+    cap.textContent=capText||''; pendingMarker=marker||null;
+    lb.classList.add('open'); reset(); scheduleFit();
+  }
+  function openSides(a, b, capText){
+    showPane(pane1, img, a?a.src:'', a?{kind:'side', side:a.side}:{});
+    showPane(pane2, img2, b?b.src:'', b?{kind:'side', side:b.side}:{});
+    cap.textContent=capText||''; pendingMarker=null;
+    lb.classList.add('open'); reset(); scheduleFit();
+  }
+  function close(){ lb.classList.remove('open'); img.src=''; img2.src=''; coord.textContent=''; pendingMarker=null; }
+  function zoomAt(mx,my,f){ var ns=Math.min(Math.max(s*f,0.05),40); tx=mx-ns*(mx-tx)/s; ty=my-ns*(my-ty)/s; s=ns; apply(); }
+  document.querySelectorAll('img.zoomable').forEach(function(el){
+    el.addEventListener('click',function(){
+      var cell=el.closest('.paircell');
+      if(cell){
+        var pimgs=[].slice.call(cell.querySelectorAll('img.pageimg'));
+        var cp=cell.querySelector('.paircap'), c=cp?cp.textContent:el.getAttribute('alt');
+        var side=function(i){ return {src:i.currentSrc||i.src, side:i.dataset.side||'v1'}; };
+        openSides(pimgs[0]?side(pimgs[0]):null, pimgs[1]?side(pimgs[1]):null, c);
+      } else {
+        openPlot(el.currentSrc||el.src, el.getAttribute('alt'),
+                 {v1w:+el.dataset.v1w, v2w:+el.dataset.v2w, gap:+(el.dataset.gap||1)}, null);
+      }
+    });
+  });
+  // Locate a table rect on its pair's overflow plot (falls back to the first plot in the pair).
+  document.querySelectorAll('td.locate').forEach(function(td){
+    td.addEventListener('click',function(){
+      var det=td.closest('details.pair'); if(!det) return;
+      if(!det.open) det.open=true;
+      var plot=det.querySelector('img[alt="overflow.png"]') || det.querySelector('img.plot');
+      if(!plot){ return; }
+      openPlot(plot.currentSrc||plot.src, plot.getAttribute('alt'),
+               {v1w:+plot.dataset.v1w, v2w:+plot.dataset.v2w, gap:+(plot.dataset.gap||1)},
+               {side:td.dataset.side, x:+td.dataset.x, y:+td.dataset.y, w:+td.dataset.w, h:+td.dataset.h});
+      cap.textContent=(td.dataset.label||'')+'  ·  '+plot.getAttribute('alt');
+    });
+  });
+  lb.addEventListener('mousedown',function(e){ if(e.target===lb||e.target===stage) close(); });
+  document.getElementById('lb-close').addEventListener('click',close);
+  document.getElementById('lb-in').addEventListener('click',function(){ zoomAt(0,0,1.25); });
+  document.getElementById('lb-out').addEventListener('click',function(){ zoomAt(0,0,1/1.25); });
+  document.getElementById('lb-reset').addEventListener('click',fit);
+  stage.addEventListener('wheel',function(e){
+    if(!lb.classList.contains('open')) return;
+    e.preventDefault();
+    var r=stage.getBoundingClientRect();
+    zoomAt(e.clientX-r.left-r.width/2, e.clientY-r.top-r.height/2, e.deltaY<0?1.15:1/1.15);
+  },{passive:false});
+  content.addEventListener('mousedown',function(e){ e.preventDefault(); drag=true; moved=false; px=e.clientX-tx; py=e.clientY-ty; content.classList.add('grabbing'); });
+  window.addEventListener('mousemove',function(e){ if(drag){ moved=true; tx=e.clientX-px; ty=e.clientY-py; apply(); } onMove(e); });
+  window.addEventListener('mouseup',function(){ drag=false; content.classList.remove('grabbing'); });
+  window.addEventListener('keydown',function(e){
+    if(!lb.classList.contains('open')) return;
+    if(e.key==='Escape') close();
+    else if(e.key==='+'||e.key==='=') zoomAt(0,0,1.25);
+    else if(e.key==='-') zoomAt(0,0,1/1.25);
+    else if(e.key==='0') fit();
+  });
+})();
+</script>
+</body></html>

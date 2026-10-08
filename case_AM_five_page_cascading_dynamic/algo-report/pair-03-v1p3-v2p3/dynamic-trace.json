@@ -1,0 +1,79 @@
+[
+  {
+    "DiffRect": "96, 95, 623, 16",
+    "Cause": "Modified",
+    "Stage": "displacement_approval",
+    "Text1": "memory stick that lives in the deed box, and the previous year's sheet is locked as soon as the\naccounts are approved and is never edited again. memory stick that lives in the deed box, and the previous year's sheet is locked as soon as the",
+    "Text2": "The accounts are kept on the spreadsheet the club has used since 2004, one sheet per year, with the\nbank statement reconciled every month and the reconciliation initialled by a second committee\nmember. The spreadsheet lives on the club's shared drive and is backed up by the treasurer to a\nmemory stick that lives in the deed box, and the previous year's sheet is locked as soon as the\naccounts are approved and is never edited again. The accounts are kept on the spreadsheet the club has used since 2004, one sheet per year, with the",
+    "DisplacementOffset": 277,
+    "Pattern": null,
+    "Suppressed": false,
+    "Reason": "no_match"
+  },
+  {
+    "DiffRect": "96, 372, 623, 16",
+    "Cause": "Modified",
+    "Stage": "page_level",
+    "Text1": "The reserve policy is written down and short: three months of running costs in the current account,\nthe repairs reserve and the boat fund in the deposit account, and anything above that spent on the\nmembers within two years. Money held for no reason is money the members could have had in\nlower subscriptions, and the committee has to say each year why it is holding what it holds, in a\nsentence a new member could follow. the repairs reserve and the boat fund in the deposit account, and anything above that spent on the",
+    "Text2": "The accounts are kept on the spreadsheet the club has used since 2004, one sheet per year, with the\nbank statement reconciled every month and the reconciliation initialled by a second committee\nmember. The spreadsheet lives on the club's shared drive and is backed up by the treasurer to a\nmemory stick that lives in the deed box, and the previous year's sheet is locked as soon as the\naccounts are approved and is never edited again. The accounts are kept on the spreadsheet the club has used since 2004, one sheet per year, with the",
+    "DisplacementOffset": 0,
+    "Pattern": null,
+    "Suppressed": false,
+    "Reason": "no_match"
+  },
+  {
+    "DiffRect": "96, 616, 615, 16",
+    "Cause": "Modified",
+    "Stage": "displacement_approval",
+    "Text1": "Debts to the club are chased by letter, then by a conversation, then by the committee, and are\nwritten off by a committee vote if they are not paid within a year, with the member's name minuted.\nIt has been needed four times in twenty years, and each time the member had already left the club,\nwhich is a comfort of a kind and not much of one, and the letters are kept in the box with the rest. It has been needed four times in twenty years, and each time the member had already left the club,",
+    "Text2": "",
+    "DisplacementOffset": 337,
+    "Pattern": null,
+    "Suppressed": false,
+    "Reason": "no_match"
+  },
+  {
+    "DiffRect": "96, 616, 615, 16",
+    "Cause": "Modified",
+    "Stage": "page_level",
+    "Text1": "Debts to the club are chased by letter, then by a conversation, then by the committee, and are\nwritten off by a committee vote if they are not paid within a year, with the member's name minuted.\nIt has been needed four times in twenty years, and each time the member had already left the club,\nwhich is a comfort of a kind and not much of one, and the letters are kept in the box with the rest. It has been needed four times in twenty years, and each time the member had already left the club,",
+    "Text2": "The examiner's fee is £1,475.00 a year and is the one professional cost the club does not shop\naround for, because an examiner who knows the club finds the things a new one would not. The fee\nis agreed in writing in January and paid in May on receipt of the report, and the letter of\nengagement is reviewed by the committee every three years so that the arrangement is a decision\nand not a habit. is agreed in writing in January and paid in May on receipt of the report, and the letter of",
+    "DisplacementOffset": 0,
+    "Pattern": null,
+    "Suppressed": false,
+    "Reason": "no_match"
+  },
+  {
+    "DiffRect": "96, 636, 606, 16",
+    "Cause": "Modified",
+    "Stage": "displacement_approval",
+    "Text1": "Debts to the club are chased by letter, then by a conversation, then by the committee, and are\nwritten off by a committee vote if they are not paid within a year, with the member's name minuted.\nIt has been needed four times in twenty years, and each time the member had already left the club,\nwhich is a comfort of a kind and not much of one, and the letters are kept in the box with the rest. which is a comfort of a kind and not much of one, and the letters are kept in the box with the rest.",
+    "Text2": "",
+    "DisplacementOffset": 337,
+    "Pattern": null,
+    "Suppressed": false,
+    "Reason": "no_match"
+  },
+  {
+    "DiffRect": "96, 636, 606, 16",
+    "Cause": "Modified",
+    "Stage": "page_level",
+    "Text1": "Debts to the club are chased by letter, then by a conversation, then by the committee, and are\nwritten off by a committee vote if they are not paid within a year, with the member's name minuted.\nIt has been needed four times in twenty years, and each time the member had already left the club,\nwhich is a comfort of a kind and not much of one, and the letters are kept in the box with the rest. which is a comfort of a kind and not much of one, and the letters are kept in the box with the rest.",
+    "Text2": "The examiner's fee is £1,475.00 a year and is the one professional cost the club does not shop\naround for, because an examiner who knows the club finds the things a new one would not. The fee\nis agreed in writing in January and paid in May on receipt of the report, and the letter of\nengagement is reviewed by the committee every three years so that the arrangement is a decision\nand not a habit. engagement is reviewed by the committee every three years so that the arrangement is a decision",
+    "DisplacementOffset": 0,
+    "Pattern": null,
+    "Suppressed": false,
+    "Reason": "no_match"
+  },
+  {
+    "DiffRect": "231, 240, 62, 16",
+    "Cause": "Changed",
+    "Stage": "displacement_approval",
+    "Text1": "The examiner's fee is £1,250.00 a year and is the one professional cost the club does not shop\naround for, because an examiner who knows the club finds the things a new one would not. The fee\nis agreed in writing in January and paid in May on receipt of the report, and the letter of\nengagement is reviewed by the committee every three years so that the arrangement is a decision\nand not a habit. The examiner's fee is £1,250.00 a year and is the one professional cost the club does not shop",
+    "Text2": "The examiner's fee is £1,475.00 a year and is the one professional cost the club does not shop\naround for, because an examiner who knows the club finds the things a new one would not. The fee\nis agreed in writing in January and paid in May on receipt of the report, and the letter of\nengagement is reviewed by the committee every three years so that the arrangement is a decision\nand not a habit. The examiner's fee is £1,475.00 a year and is the one professional cost the club does not shop",
+    "DisplacementOffset": 337,
+    "Pattern": "Day+Month+Price",
+    "Suppressed": true,
+    "Reason": "pattern_match"
+  }
+]

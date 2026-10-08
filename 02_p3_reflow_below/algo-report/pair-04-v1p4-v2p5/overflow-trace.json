@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "kind": "pdf-pair-trace",
+  "case": "02_p3_reflow_below",
+  "pair": {
+    "index": 4,
+    "v1Page": 4,
+    "v2Page": 5
+  },
+  "baseline": {
+    "renderDpi": 96.0,
+    "widthPx": 794,
+    "heightPx": 1123,
+    "axTreeAvailable": true
+  },
+  "checkpoint": {
+    "renderDpi": 96.0,
+    "widthPx": 794,
+    "heightPx": 1123,
+    "axTreeAvailable": true
+  },
+  "units": "px",
+  "settings": {
+    "verticalTolerancePixels": 2,
+    "horizontalTolerancePixels": 2,
+    "maxVerticalSearchPixels": 200,
+    "minNeighbourTextLength": 3,
+    "aggregateRawDiffs": true
+  },
+  "counts": {
+    "byTag": {},
+    "byFrame": {},
+    "byMechanism": {}
+  },
+  "rawDiffs": [],
+  "aggregated": [],
+  "records": [],
+  "field": {
+    "steps": [],
+    "lineSteps": [],
+    "crossBase": 0,
+    "bottomShift": 0,
+    "crossForward": false,
+    "crossBackward": false,
+    "crossing": null,
+    "stepsV2": [],
+    "lineStepsV2": []
+  },
+  "blocks": []
+}

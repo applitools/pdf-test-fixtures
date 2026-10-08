@@ -1,0 +1,24 @@
+[
+  {
+    "DiffRect": "96, 115, 616, 16",
+    "Cause": "Modified",
+    "Stage": "displacement_approval",
+    "Text1": "where anglers are not allowed. The report goes to the trust by telephone the same day and is\nwritten in the log. written in the log.",
+    "Text2": "The marsh itself is managed by the trust, not the observatory, and the volunteers do not cut, dig,\nburn or plant anything without the trust's warden asking them to. What the observatory does do is\nwatch, and report: a blocked sluice, a fallen fence, a stranded seal, a fire on the shingle, an angler\nwhere anglers are not allowed. The report goes to the trust by telephone the same day and is\nwritten in the log. burn or plant anything without the trust's warden asking them to. What the observatory does do is",
+    "DisplacementOffset": 112,
+    "Pattern": null,
+    "Suppressed": false,
+    "Reason": "no_match"
+  },
+  {
+    "DiffRect": "96, 227, 616, 16",
+    "Cause": "Modified",
+    "Stage": "page_level",
+    "Text1": "The migration seasons, late April and September into October, bring the most birds, the most\nvisitors and the most volunteers, and the rota for those weeks is drawn up in the month before and\npinned on the cottage wall. Anyone who can offer a full week in either season is asked to, because\nthe census is worth more walked by the same eyes for seven days than by seven different pairs. The migration seasons, late April and September into October, bring the most birds, the most",
+    "Text2": "The marsh itself is managed by the trust, not the observatory, and the volunteers do not cut, dig,\nburn or plant anything without the trust's warden asking them to. What the observatory does do is\nwatch, and report: a blocked sluice, a fallen fence, a stranded seal, a fire on the shingle, an angler\nwhere anglers are not allowed. The report goes to the trust by telephone the same day and is\nwritten in the log. burn or plant anything without the trust's warden asking them to. What the observatory does do is",
+    "DisplacementOffset": 0,
+    "Pattern": null,
+    "Suppressed": false,
+    "Reason": "no_match"
+  }
+]

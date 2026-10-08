@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "kind": "pdf-run",
+  "case": "02_p3_reflow_below",
+  "renderDpi": 96.0,
+  "useDynamic": true,
+  "alignment": {
+    "matchedPairs": 5,
+    "insertedPages": [
+      3
+    ],
+    "deletedPages": []
+  },
+  "pairs": [
+    {
+      "index": 0,
+      "v1Page": 0,
+      "v2Page": 0,
+      "traceFile": "pair-00-v1p0-v2p0/overflow-trace.json",
+      "pngFiles": [],
+      "counts": {}
+    },
+    {
+      "index": 1,
+      "v1Page": 1,
+      "v2Page": 1,
+      "traceFile": "pair-01-v1p1-v2p1/overflow-trace.json",
+      "pngFiles": [],
+      "counts": {}
+    },
+    {
+      "index": 2,
+      "v1Page": 2,
+      "v2Page": 2,
+      "traceFile": "pair-02-v1p2-v2p2/overflow/overflow-trace.json",
+      "pngFiles": [
+        "pair-02-v1p2-v2p2/matcher/raw-diff.png",
+        "pair-02-v1p2-v2p2/overflow/overflow.png",
+        "pair-02-v1p2-v2p2/overflow/change-vs-move.png",
+        "pair-02-v1p2-v2p2/overflow/fragment-tags.png",
+        "pair-02-v1p2-v2p2/overflow/aggregation.png",
+        "pair-02-v1p2-v2p2/overflow/visual-lines.png"
+      ],
+      "counts": {
+        "DisplacedDown": 13,
+        "Inserted": 2,
+        "OverflowToNext": 2
+      }
+    },
+    {
+      "index": 3,
+      "v1Page": 3,
+      "v2Page": 4,
+      "traceFile": "pair-03-v1p3-v2p4/overflow-trace.json",
+      "pngFiles": [],
+      "counts": {}
+    },
+    {
+      "index": 4,
+      "v1Page": 4,
+      "v2Page": 5,
+      "traceFile": "pair-04-v1p4-v2p5/overflow-trace.json",
+      "pngFiles": [],
+      "counts": {}
+    }
+  ]
+}

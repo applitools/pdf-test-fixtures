@@ -1,0 +1,47 @@
+{
+  "case": "06_reflow_plus_real_diff_p4",
+  "v1PageCount": 5,
+  "v2PageCount": 6,
+  "matchedPairs": [
+    {
+      "pairIndex": 0,
+      "v1Page": 0,
+      "v2Page": 0,
+      "disposition": "modified",
+      "classifiedDiffs": 23
+    },
+    {
+      "pairIndex": 1,
+      "v1Page": 1,
+      "v2Page": 2,
+      "disposition": "identical",
+      "classifiedDiffs": 0
+    },
+    {
+      "pairIndex": 2,
+      "v1Page": 2,
+      "v2Page": 3,
+      "disposition": "identical",
+      "classifiedDiffs": 0
+    },
+    {
+      "pairIndex": 3,
+      "v1Page": 3,
+      "v2Page": 4,
+      "disposition": "identical",
+      "classifiedDiffs": 0
+    },
+    {
+      "pairIndex": 4,
+      "v1Page": 4,
+      "v2Page": 5,
+      "disposition": "modified",
+      "classifiedDiffs": 38
+    }
+  ],
+  "deletedV1Pages": [],
+  "insertedV2Pages": [
+    1
+  ],
+  "summary": "case: 06_reflow_plus_real_diff_p4\r\nv1 pages: 5   v2 pages: 6\r\nmatched pairs: 5   v1-only (deleted): []   v2-only (inserted): [1]\r\ntotal classified page diffs (over matched pairs): 61\r\n  alerting (real diff):     5   [Changed/Inserted/Deleted/Modified — IsAlerting()]\r\n  dynamic content:          0   [reported, never alerts]\r\n  document furniture:       0   [reported, never alerts]\r\n  content shift (overflow): 2   [crossed a page boundary; user confirms]\r\n  displacement (filtered):  54   [same-page move; not surfaced]\r\ndynamic: ON (--no-dynamic to disable)\r\n\r\n  pair v1#0 <-> v2#0: 382 raw -> 21 aggregated -> 23 classified   (pair-00-v1p0-v2p0/: matcher/ raw, overflow/ classified+aggregation)\r\n  pair v1#1 <-> v2#2: MATCH (no diffs) -> result.json + overflow-trace.json\r\n  pair v1#2 <-> v2#3: MATCH (no diffs) -> result.json + overflow-trace.json\r\n  pair v1#3 <-> v2#4: MATCH (no diffs) -> result.json + overflow-trace.json\r\n  pair v1#4 <-> v2#5: 519 raw -> 37 aggregated -> 38 classified   (pair-04-v1p4-v2p5/: matcher/ raw, overflow/ classified+aggregation)\r\n  inserted v2#1 -> structural/inserted-v2-001.png\r\n"
+}

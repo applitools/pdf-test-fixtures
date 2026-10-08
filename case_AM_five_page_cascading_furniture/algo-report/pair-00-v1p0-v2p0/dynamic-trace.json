@@ -1,0 +1,24 @@
+[
+  {
+    "DiffRect": "96, 491, 608, 13",
+    "Cause": "Changed",
+    "Stage": "displacement_approval",
+    "Text1": "",
+    "Text2": "",
+    "DisplacementOffset": 152,
+    "Pattern": null,
+    "Suppressed": false,
+    "Reason": "no_text"
+  },
+  {
+    "DiffRect": "429, 990, 9, 15",
+    "Cause": "Changed",
+    "Stage": "displacement_approval",
+    "Text1": "5",
+    "Text2": "",
+    "DisplacementOffset": 151,
+    "Pattern": null,
+    "Suppressed": false,
+    "Reason": "no_match"
+  }
+]

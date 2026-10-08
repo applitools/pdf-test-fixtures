@@ -1,0 +1,45 @@
+{
+  "case": "case_AM_five_page_cancelled_cascade",
+  "v1PageCount": 5,
+  "v2PageCount": 5,
+  "matchedPairs": [
+    {
+      "pairIndex": 0,
+      "v1Page": 0,
+      "v2Page": 0,
+      "disposition": "modified",
+      "classifiedDiffs": 36
+    },
+    {
+      "pairIndex": 1,
+      "v1Page": 1,
+      "v2Page": 1,
+      "disposition": "modified",
+      "classifiedDiffs": 34
+    },
+    {
+      "pairIndex": 2,
+      "v1Page": 2,
+      "v2Page": 2,
+      "disposition": "identical",
+      "classifiedDiffs": 0
+    },
+    {
+      "pairIndex": 3,
+      "v1Page": 3,
+      "v2Page": 3,
+      "disposition": "identical",
+      "classifiedDiffs": 0
+    },
+    {
+      "pairIndex": 4,
+      "v1Page": 4,
+      "v2Page": 4,
+      "disposition": "identical",
+      "classifiedDiffs": 0
+    }
+  ],
+  "deletedV1Pages": [],
+  "insertedV2Pages": [],
+  "summary": "case: case_AM_five_page_cancelled_cascade\r\nv1 pages: 5   v2 pages: 5\r\nmatched pairs: 5   v1-only (deleted): []   v2-only (inserted): []\r\ntotal classified page diffs (over matched pairs): 70\r\n  alerting (real diff):     2   [Changed/Inserted/Deleted/Modified — IsAlerting()]\r\n  dynamic content:          0   [reported, never alerts]\r\n  document furniture:       0   [reported, never alerts]\r\n  content shift (overflow): 8   [crossed a page boundary; user confirms]\r\n  displacement (filtered):  60   [same-page move; not surfaced]\r\ndynamic: ON (--no-dynamic to disable)\r\n\r\n  pair v1#0 <-> v2#0: 1888 raw -> 39 aggregated -> 36 classified   (pair-00-v1p0-v2p0/: matcher/ raw, overflow/ classified+aggregation)\r\n  pair v1#1 <-> v2#1: 1264 raw -> 29 aggregated -> 34 classified   (pair-01-v1p1-v2p1/: matcher/ raw, overflow/ classified+aggregation)\r\n  pair v1#2 <-> v2#2: MATCH (no diffs) -> result.json + overflow-trace.json\r\n  pair v1#3 <-> v2#3: MATCH (no diffs) -> result.json + overflow-trace.json\r\n  pair v1#4 <-> v2#4: MATCH (no diffs) -> result.json + overflow-trace.json\r\n"
+}

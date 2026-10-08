@@ -1,0 +1,68 @@
+[
+  {
+    "DiffRect": "96, 319, 609, 16",
+    "Cause": "DisplacedDown",
+    "Stage": "displacement_approval",
+    "Text1": "The lease on the boathouse runs to 14 March 2019 and is reviewed by the harbour board every five\nyears, with the rent set at the review and paid quarterly in advance. The review letters, the signed\nlease and the board's schedule of conditions are in the deed box at the bank, and the treasurer holds\ncopies. Anyone negotiating the next review should read the last three letters first, because the\nboard's position has not changed and neither has ours. The lease on the boathouse runs to 14 March 2019 and is reviewed by the harbour board every five",
+    "Text2": "The lease on the boathouse runs to 22 June 2021 and is reviewed by the harbour board every five\nyears, with the rent set at the review and paid quarterly in advance. The review letters, the signed\nlease and the board's schedule of conditions are in the deed box at the bank, and the treasurer holds\ncopies. Anyone negotiating the next review should read the last three letters first, because the\nboard's position has not changed and neither has ours. The lease on the boathouse runs to 22 June 2021 and is reviewed by the harbour board every five",
+    "DisplacementOffset": 165,
+    "Pattern": "Date+Day",
+    "Suppressed": true,
+    "Reason": "pattern_match"
+  },
+  {
+    "DiffRect": "690, 627, 26, 12",
+    "Cause": "Modified",
+    "Stage": "displacement_approval",
+    "Text1": "The regatta in July is the club's second income and its largest single risk, because the costs are\ncommitted in May and the entries arrive in June. The regatta secretary keeps a separate sheet for it,\nagreed with the treasurer in April, and reports against it weekly from the first of June. A regatta that\nis heading for a loss is cut back in June, not rescued in July, and the committee has learned to make\nthat decision early.",
+    "Text2": "The regatta in July is the club's second income and its largest single risk, because the costs are\ncommitted in May and the entries arrive in June. The regatta secretary keeps a separate sheet for it,\nagreed with the treasurer in April, and reports against it weekly from the first of June. A regatta that\nis heading for a loss is cut back in June, not rescued in July, and the committee has learned to make\nthat decision early.",
+    "DisplacementOffset": 165,
+    "Pattern": null,
+    "Suppressed": false,
+    "Reason": "same_text"
+  },
+  {
+    "DiffRect": "690, 792, 26, 12",
+    "Cause": "Modified",
+    "Stage": "page_level",
+    "Text1": "Grants are applied for by whoever has the energy, with the treasurer's figures and the chair's\nsignature, and are spent only on what the application said. A grant that arrives for a purpose the\nclub no longer needs is returned, with a letter, rather than quietly spent on something else; the club\nhas been funded twice by the same body because of that letter. club no longer needs is returned, with a letter, rather than quietly spent on something else; the club",
+    "Text2": "The regatta in July is the club's second income and its largest single risk, because the costs are\ncommitted in May and the entries arrive in June. The regatta secretary keeps a separate sheet for it,\nagreed with the treasurer in April, and reports against it weekly from the first of June. A regatta that\nis heading for a loss is cut back in June, not rescued in July, and the committee has learned to make\nthat decision early.",
+    "DisplacementOffset": 0,
+    "Pattern": null,
+    "Suppressed": false,
+    "Reason": "no_match"
+  },
+  {
+    "DiffRect": "319, 319, 14, 16",
+    "Cause": "Changed",
+    "Stage": "displacement_approval",
+    "Text1": "The lease on the boathouse runs to 14 March 2019 and is reviewed by the harbour board every five\nyears, with the rent set at the review and paid quarterly in advance. The review letters, the signed\nlease and the board's schedule of conditions are in the deed box at the bank, and the treasurer holds\ncopies. Anyone negotiating the next review should read the last three letters first, because the\nboard's position has not changed and neither has ours. The lease on the boathouse runs to 14 March 2019 and is reviewed by the harbour board every five",
+    "Text2": "The lease on the boathouse runs to 22 June 2021 and is reviewed by the harbour board every five\nyears, with the rent set at the review and paid quarterly in advance. The review letters, the signed\nlease and the board's schedule of conditions are in the deed box at the bank, and the treasurer holds\ncopies. Anyone negotiating the next review should read the last three letters first, because the\nboard's position has not changed and neither has ours. The lease on the boathouse runs to 22 June 2021 and is reviewed by the harbour board every five",
+    "DisplacementOffset": 165,
+    "Pattern": "Date+Day",
+    "Suppressed": true,
+    "Reason": "pattern_match"
+  },
+  {
+    "DiffRect": "337, 319, 39, 16",
+    "Cause": "Changed",
+    "Stage": "displacement_approval",
+    "Text1": "The lease on the boathouse runs to 14 March 2019 and is reviewed by the harbour board every five\nyears, with the rent set at the review and paid quarterly in advance. The review letters, the signed\nlease and the board's schedule of conditions are in the deed box at the bank, and the treasurer holds\ncopies. Anyone negotiating the next review should read the last three letters first, because the\nboard's position has not changed and neither has ours. The lease on the boathouse runs to 14 March 2019 and is reviewed by the harbour board every five",
+    "Text2": "The lease on the boathouse runs to 22 June 2021 and is reviewed by the harbour board every five\nyears, with the rent set at the review and paid quarterly in advance. The review letters, the signed\nlease and the board's schedule of conditions are in the deed box at the bank, and the treasurer holds\ncopies. Anyone negotiating the next review should read the last three letters first, because the\nboard's position has not changed and neither has ours. The lease on the boathouse runs to 22 June 2021 and is reviewed by the harbour board every five",
+    "DisplacementOffset": 165,
+    "Pattern": "Date+Day",
+    "Suppressed": true,
+    "Reason": "pattern_match"
+  },
+  {
+    "DiffRect": "380, 319, 32, 16",
+    "Cause": "Changed",
+    "Stage": "displacement_approval",
+    "Text1": "The lease on the boathouse runs to 14 March 2019 and is reviewed by the harbour board every five\nyears, with the rent set at the review and paid quarterly in advance. The review letters, the signed\nlease and the board's schedule of conditions are in the deed box at the bank, and the treasurer holds\ncopies. Anyone negotiating the next review should read the last three letters first, because the\nboard's position has not changed and neither has ours. The lease on the boathouse runs to 14 March 2019 and is reviewed by the harbour board every five",
+    "Text2": "The lease on the boathouse runs to 22 June 2021 and is reviewed by the harbour board every five\nyears, with the rent set at the review and paid quarterly in advance. The review letters, the signed\nlease and the board's schedule of conditions are in the deed box at the bank, and the treasurer holds\ncopies. Anyone negotiating the next review should read the last three letters first, because the\nboard's position has not changed and neither has ours. The lease on the boathouse runs to 22 June 2021 and is reviewed by the harbour board every five",
+    "DisplacementOffset": 165,
+    "Pattern": "Date+Day",
+    "Suppressed": true,
+    "Reason": "pattern_match"
+  }
+]

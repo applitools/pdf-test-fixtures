@@ -1,0 +1,35 @@
+[
+  {
+    "DiffRect": "96, 114, 614, 16",
+    "Cause": "Modified",
+    "Stage": "displacement_approval",
+    "Text1": "and keeps the strong room log; the other stays in the room. The rule of two is not about suspicion. It\nis about having someone free to answer a question, find a reference, or deal with a spill while the\nother is out of the room with a box on the trolley and no hands free. is about having someone free to answer a question, find a reference, or deal with a spill while the",
+    "Text2": "The reading room is open on Tuesday and Saturday mornings and at other times by appointment,\nand it is staffed by two volunteers whenever it is open. One volunteer fetches and returns material\nand keeps the strong room log; the other stays in the room. The rule of two is not about suspicion. It\nis about having someone free to answer a question, find a reference, or deal with a spill while the\nother is out of the room with a box on the trolley and no hands free. and it is staffed by two volunteers whenever it is open. One volunteer fetches and returns material",
+    "DisplacementOffset": 337,
+    "Pattern": null,
+    "Suppressed": false,
+    "Reason": "no_match"
+  },
+  {
+    "DiffRect": "96, 451, 614, 16",
+    "Cause": "Modified",
+    "Stage": "page_level",
+    "Text1": "Enquiries by post and email are answered within a month, and the answer says either what was\nfound, what was looked at without success, or what would need to be looked at and roughly how\nlong that would take. The archive does not undertake research on a searcher's behalf beyond an\nhour, but it will always say what it holds and let the searcher decide whether to come. A reply that\nsays only that the material may exist is not an answer to anything, and it is not sent. hour, but it will always say what it holds and let the searcher decide whether to come. A reply that",
+    "Text2": "The reading room is open on Tuesday and Saturday mornings and at other times by appointment,\nand it is staffed by two volunteers whenever it is open. One volunteer fetches and returns material\nand keeps the strong room log; the other stays in the room. The rule of two is not about suspicion. It\nis about having someone free to answer a question, find a reference, or deal with a spill while the\nother is out of the room with a box on the trolley and no hands free. and it is staffed by two volunteers whenever it is open. One volunteer fetches and returns material",
+    "DisplacementOffset": 0,
+    "Pattern": null,
+    "Suppressed": false,
+    "Reason": "no_match"
+  },
+  {
+    "DiffRect": "429, 990, 9, 15",
+    "Cause": "Changed",
+    "Stage": "displacement_approval",
+    "Text1": "5",
+    "Text2": "",
+    "DisplacementOffset": 337,
+    "Pattern": null,
+    "Suppressed": false,
+    "Reason": "no_match"
+  }
+]
