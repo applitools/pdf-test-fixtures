@@ -82,13 +82,13 @@ td.locate:hover{background:#eef4fb;text-decoration:underline}
 <table class="kv">
 <tr><th>case</th><td>case_AM_five_page_cascading_furniture</td><th>kind</th><td>real</td></tr>
 <tr><th>input folder</th><td colspan="3" class="mono path">C:\Users\yoav\devel\applitools\bin\tests\images\PDFs\real\edited\case_AM_five_page_cascading_furniture</td></tr>
-<tr><th>output folder</th><td colspan="3" class="mono path">C:\Users\yoav\testres\pdf\e2e_261006\case_AM_five_page_cascading_furniture_20261006-135348-2d65f9</td></tr>
+<tr><th>output folder</th><td colspan="3" class="mono path">C:\Users\yoav\testres\pdf\e2e_261008\case_AM_five_page_cascading_furniture_20261008-170437-c8c1a3</td></tr>
 <tr><th>source</th><td colspan="3">v1.pdf</td></tr>
 <tr><th>render DPI</th><td>96.0</td>
     <th>units</th><td>px</td></tr>
 <tr><th>baseline (v1)</th><td>816&times;1056 px, axTree=True</td>
     <th>checkpoint (v2)</th><td>816&times;1056 px, axTree=True</td></tr>
-<tr><th>pipeline commit</th><td colspan="3" class="mono">ec8da6889</td></tr>
+<tr><th>pipeline commit</th><td colspan="3" class="mono">8e89be382</td></tr>
 </table></section><section id="gt"><h2>2 &middot; Ground truth</h2><table class="rec"><tr><th>type</th><th>granularity</th><th>v1 page</th><th>description</th><th>expected region</th></tr><tr><td>insert</td><td>paragraph</td><td>1</td><td>Inserted a paragraph (about 7 lines) on why the town keeps its own archive, after the founding paragraph. This is the cascade driver: everything below it moves down, and the tail of page 1 crosses onto page 2.</td><td>page 1, from the fourth paragraph down counting the title line (the insert follows the second body paragraph) -- the inserted paragraph and everything it pushes; the last lines of v1 page 1 open v2 page 2</td></tr><tr><td>replace</td><td>sentence</td><td>2</td><td>Grew the scope-notes paragraph by two sentences (about 3 lines) on recording the box&#x27;s physical state. Adds to the cascade inherited from page 1.</td><td>page 2, third paragraph -- the paragraph grows by several lines and everything below it moves further down, on top of the shift inherited from page 1</td></tr><tr><td>insert</td><td>paragraph</td><td>3</td><td>Inserted a paragraph (about 7 lines) on the items the standard box cannot hold, after the photographs paragraph. Adds to the cascade rather than offsetting it.</td><td>page 3, from the fourth paragraph down -- the inserted paragraph and everything it pushes, on top of the shift inherited from pages 1-2</td></tr><tr><td>replace</td><td>sentence</td><td>4</td><td>Shrank the requests paragraph by about two rendered lines: the three-box rule and the photography rule folded into one short sentence. The accumulated shift turns back down here.</td><td>page 4, third paragraph -- the paragraph loses two lines and everything below it moves up relative to the inherited shift, which stays downward overall</td></tr><tr><td>delete</td><td>paragraph</td><td>5</td><td>Deleted the short paragraph on volunteers&#x27; own photographs in full.</td><td>page 5, third paragraph -- the removed paragraph; the paragraphs below it move up by its height but still sit lower than in v1, and the tail of the page spills onto the new page 6</td></tr></table><details><summary>provenance.md</summary><div class="mdbox"><h3>Provenance — case_AM_five_page_cascading_furniture</h3>
 
 <p>Real-PDF labelled pair (Story 1.13). v2.pdf was produced by an <strong>external</strong></p>
@@ -119,7 +119,7 @@ td.locate:hover{background:#eef4fb;text-decoration:underline}
 <p>harness itself adds no timestamps/RNG.</p></div></details></section><section id="algo"><h2>3 &middot; Algorithm</h2>
 <table class="kv">
 <tr><th>matcher</th><td>Strict</td></tr>
-<tr><th>dynamic</th><td>Dynamic mode: <b>ON</b></td></tr>
+<tr><th>dynamic</th><td>Dynamic mode: <b>OFF</b></td></tr>
 <tr><th>overflow settings</th><td class="mono">vTol=2 &middot;
     hTol=2 &middot;
     maxVSearch=200 &middot;
@@ -144,7 +144,7 @@ total classified page diffs (over matched pairs): 267
 
   displacement (filtered):  218   [same-page move; not surfaced]
 
-dynamic: ON (--no-dynamic to disable)
+dynamic: OFF (--no-dynamic)
 
 
 

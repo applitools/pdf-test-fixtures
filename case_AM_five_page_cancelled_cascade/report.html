@@ -82,13 +82,13 @@ td.locate:hover{background:#eef4fb;text-decoration:underline}
 <table class="kv">
 <tr><th>case</th><td>case_AM_five_page_cancelled_cascade</td><th>kind</th><td>real</td></tr>
 <tr><th>input folder</th><td colspan="3" class="mono path">C:\Users\yoav\devel\applitools\bin\tests\images\PDFs\real\edited\case_AM_five_page_cancelled_cascade</td></tr>
-<tr><th>output folder</th><td colspan="3" class="mono path">C:\Users\yoav\testres\pdf\e2e_261006\case_AM_five_page_cancelled_cascade_20261006-135331-23b0f8</td></tr>
+<tr><th>output folder</th><td colspan="3" class="mono path">C:\Users\yoav\testres\pdf\e2e_261008\case_AM_five_page_cancelled_cascade_20261008-170351-53bb72</td></tr>
 <tr><th>source</th><td colspan="3">v1.pdf</td></tr>
 <tr><th>render DPI</th><td>96.0</td>
     <th>units</th><td>px</td></tr>
 <tr><th>baseline (v1)</th><td>816&times;1056 px, axTree=True</td>
     <th>checkpoint (v2)</th><td>816&times;1056 px, axTree=True</td></tr>
-<tr><th>pipeline commit</th><td colspan="3" class="mono">ec8da6889</td></tr>
+<tr><th>pipeline commit</th><td colspan="3" class="mono">8e89be382</td></tr>
 </table></section><section id="gt"><h2>2 &middot; Ground truth</h2><table class="rec"><tr><th>type</th><th>granularity</th><th>v1 page</th><th>description</th><th>expected region</th></tr><tr><td>insert</td><td>paragraph</td><td>1</td><td>Inserted a paragraph on why the museum matters, after the founding paragraph. The cascade driver: page 1&#x27;s tail crosses onto page 2.</td><td>page 1, from the fourth paragraph down counting the title line -- the inserted paragraph and everything it pushes; the last lines of v1 page 1 open v2 page 2</td></tr><tr><td>delete</td><td>paragraph</td><td>2</td><td>Deleted the school-parties paragraph in full. It renders on exactly as many lines as the page-1 insert, so the shift it inherited is cancelled here.</td><td>page 2, from the top to the third paragraph -- the inherited lines at the top and the removed paragraph; nothing below it moves, and pages 3-5 are identical</td></tr></table><details><summary>provenance.md</summary><div class="mdbox"><h3>Provenance — case_AM_five_page_cancelled_cascade</h3>
 
 <p>Real-PDF labelled pair (Story 1.13). v2.pdf was produced by an <strong>external</strong></p>
@@ -119,7 +119,7 @@ td.locate:hover{background:#eef4fb;text-decoration:underline}
 <p>harness itself adds no timestamps/RNG.</p></div></details></section><section id="algo"><h2>3 &middot; Algorithm</h2>
 <table class="kv">
 <tr><th>matcher</th><td>Strict</td></tr>
-<tr><th>dynamic</th><td>Dynamic mode: <b>ON</b></td></tr>
+<tr><th>dynamic</th><td>Dynamic mode: <b>OFF</b></td></tr>
 <tr><th>overflow settings</th><td class="mono">vTol=2 &middot;
     hTol=2 &middot;
     maxVSearch=200 &middot;
@@ -144,7 +144,7 @@ total classified page diffs (over matched pairs): 70
 
   displacement (filtered):  60   [same-page move; not surfaced]
 
-dynamic: ON (--no-dynamic to disable)
+dynamic: OFF (--no-dynamic)
 
 
 

@@ -82,13 +82,13 @@ td.locate:hover{background:#eef4fb;text-decoration:underline}
 <table class="kv">
 <tr><th>case</th><td>02_p3_reflow_below</td><th>kind</th><td>real</td></tr>
 <tr><th>input folder</th><td colspan="3" class="mono path">C:\Users\yoav\devel\applitools\bin\tests\images\PDFs\real\edited\02_p3_reflow_below</td></tr>
-<tr><th>output folder</th><td colspan="3" class="mono path">C:\Users\yoav\testres\pdf\e2e_261006\02_p3_reflow_below_20261006-135325-d56eee</td></tr>
+<tr><th>output folder</th><td colspan="3" class="mono path">C:\Users\yoav\testres\pdf\e2e_261008\02_p3_reflow_below_20261008-170329-9fe2c1</td></tr>
 <tr><th>source</th><td colspan="3">v1.pdf</td></tr>
 <tr><th>render DPI</th><td>96.0</td>
     <th>units</th><td>px</td></tr>
 <tr><th>baseline (v1)</th><td>794&times;1123 px, axTree=True</td>
     <th>checkpoint (v2)</th><td>794&times;1123 px, axTree=True</td></tr>
-<tr><th>pipeline commit</th><td colspan="3" class="mono">ec8da6889</td></tr>
+<tr><th>pipeline commit</th><td colspan="3" class="mono">8e89be382</td></tr>
 </table></section><section id="gt"><h2>2 &middot; Ground truth</h2><table class="rec"><tr><th>type</th><th>granularity</th><th>v1 page</th><th>description</th><th>expected region</th></tr><tr><td>insert</td><td>paragraph</td><td>3</td><td>Two new sections inserted after Section 25: &#x27;INSERTED A.&#x27; and &#x27;INSERTED B.&#x27; (INSERTED B ends with the italic phrase &#x27;New content.&#x27;). Content below reflows down; page 3 now ends at Section 31 (was Section 33), and Sections 32-33 overflow onto a newly inserted page.</td><td>page 3 body, after Section 25; the reflow-below overflow (Sections 32-33) lands on the inserted page (v2 page 4)</td></tr></table><details><summary>provenance.md</summary><div class="mdbox"><h3>Provenance — 02_p3_reflow_below</h3>
 
 <p>Real-PDF labelled pair (Story 1.13). v2.pdf was produced by an <strong>external</strong></p>
@@ -119,7 +119,7 @@ td.locate:hover{background:#eef4fb;text-decoration:underline}
 <p>harness itself adds no timestamps/RNG.</p></div></details></section><section id="algo"><h2>3 &middot; Algorithm</h2>
 <table class="kv">
 <tr><th>matcher</th><td>Strict</td></tr>
-<tr><th>dynamic</th><td>Dynamic mode: <b>ON</b></td></tr>
+<tr><th>dynamic</th><td>Dynamic mode: <b>OFF</b></td></tr>
 <tr><th>overflow settings</th><td class="mono">vTol=2 &middot;
     hTol=2 &middot;
     maxVSearch=200 &middot;
@@ -144,7 +144,7 @@ total classified page diffs (over matched pairs): 17
 
   displacement (filtered):  13   [same-page move; not surfaced]
 
-dynamic: ON (--no-dynamic to disable)
+dynamic: OFF (--no-dynamic)
 
 
 
