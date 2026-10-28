@@ -317,7 +317,7 @@ dynamic: OFF (--no-dynamic)
       openPlot(plot.currentSrc||plot.src, plot.getAttribute('alt'),
                {v1w:+plot.dataset.v1w, v2w:+plot.dataset.v2w, gap:+(plot.dataset.gap||1)},
                {side:td.dataset.side, x:+td.dataset.x, y:+td.dataset.y, w:+td.dataset.w, h:+td.dataset.h});
-      cap.textContent=(td.dataset.label||'')+'  ·  '+plot.getAttribute('alt');
+      cap.textContent=(plot.dataset.pair ? plot.dataset.pair+'  ·  ' : '')+(td.dataset.label||'')+'  ·  '+plot.getAttribute('alt');
     });
   });
   lb.addEventListener('mousedown',function(e){ if(e.target===lb||e.target===stage) close(); });
